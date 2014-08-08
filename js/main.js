@@ -26,8 +26,8 @@ window.Site = (function(){
 				$el = $(document.createElement('div'));
 				$el.addClass('block')
 					.attr('style', 'background: {{background}}')
-					.append('<h1>{{title}}</h1>')
-					.append('<div class="block-content"><span class="indent"></span>{{content}}</div>');
+					.append('<h1>{{{title}}}</h1>')
+					.append('<div class="block-content"><span class="indent"></span>{{{content}}}</div>');
 				return $el[0].outerHTML;
 			}()),
 
@@ -62,7 +62,7 @@ window.Site = (function(){
 		},
 		{
 			title: "no",
-			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
+			content: "Developers <a href='developers'>developers</a> developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
 		},
 		{
 			title: "teST",
