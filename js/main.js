@@ -9,6 +9,7 @@ window.Site = (function(){
 	// from http://davidwalsh.name/vendor-prefix
 	var scrollLast = 0;
 	$toolbar = $('.toolbar');
+	$sidebar = $('.sidebar');
 	var s = window.getComputedStyle(document.documentElement, '');
 	var prefix = (Array.prototype.slice
 		.call(s)
@@ -57,15 +58,15 @@ window.Site = (function(){
 
 	var blocks = [
 		{
-			title: "here is a story",
+			title: "<i class='fa fa-user'></i> About Me",
 			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
 		},
 		{
-			title: "no",
+			title: "<i class='fa fa-code'></i> Projects",
 			content: "Developers <a href='developers'>developers</a> developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
 		},
 		{
-			title: "teST",
+			title: "<i class='fa fa-code'></i> ",
 			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
 		}
 	];
@@ -119,10 +120,16 @@ window.Site = (function(){
 	$(document).scroll(function(){
 		if(scrollLast < window.scrollY){
 			$toolbar.addClass('hidden');
+			$sidebar.addClass('toolbar-hidden');
 		}else{
 			$toolbar.removeClass('hidden');
+			$sidebar.removeClass('toolbar-hidden');
 		}
 		scrollLast = window.scrollY;
+	});
+
+	$(document).ready(function(){
+		$('body').removeClass('preload');
 	});
 
 	return Site;
