@@ -5,6 +5,15 @@ jQuery.fn.outerHTML = function(s) {
 		: jQuery("<p>").append(this.eq(0).clone()).html();
 };
 
+try{
+	if(new window.ActiveXObject("Microsoft.XMLHTTP")){
+		window.location = "http://chrome.com";
+	}
+}catch(e){
+	console.log("Thanks for not using Internet Explorer!");
+}
+
+
 window.Site = (function(){
 	// from http://davidwalsh.name/vendor-prefix
 	var scrollLast = 0;
