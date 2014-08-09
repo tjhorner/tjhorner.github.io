@@ -200,9 +200,9 @@ window.Site = (function(){
 											.addClass('animated fadeIn');
 			$('body').append($gaben);
 		});
-		$footer.addClass('animated fadeOutDown');
-		$toolbar.addClass('animated fadeOutUp');
-		$sidebar.addClass('animated fadeOutLeft');
+		$footer.addClass('animated fadeOutDownBig');
+		$toolbar.addClass('animated fadeOutUpBig');
+		$sidebar.addClass('animated fadeOutLeftBig');
 	};
 	konamiEgg.load();
 
