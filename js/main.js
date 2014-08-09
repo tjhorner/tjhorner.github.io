@@ -74,7 +74,12 @@ window.Site = (function(){
 			}()),
 
 			Project: (function(){
-
+				$el = $(document.createElement('div'));
+				$el.addClass('project')
+					.attr('style', 'background-image: url({{image}})')
+					.attr('id', 'project-{{id}}')
+					.append('<h1 class="projectTitle"><a href="{{url}}">{{{name}}}</a></h1>{{{description}}}');
+				return $el[0].outerHTML;
 			}())
 		},
 
@@ -101,15 +106,38 @@ window.Site = (function(){
 		{
 			title: "Projects",
 			icon: "code",
-			content: ballmeripsum,
+			content: (function(){
+				$el = $('<div class="projects"></div>');
+				projects = [
+					{
+						name: "iQuestria",
+						url: "http://iquestria.net",
+						description: "A social network by bronies, for bronies",
+						image: "http://datastorage.iquestria.net/logos/1024.png",
+						id: "iquestria"
+					},
+					{
+						name: "Chattr",
+						url: "http://chattrapp.net",
+						description: 'Idea originally by <a href="http://syrexide.com">Syrexide</a>. An open source chat client that you can hack to your needs.',
+						image: "http://www.syrexide.com/img/chattr.png",
+						id: "chattr"
+					}
+				];
+				$.each(projects, function(o,i){
+					$el.append(Mustache.render(templates.Project, i));
+				});
+
+				return $el[0].outerHTML;
+			}()),
 			id: "projects",
 			extraClasses: "wow rollIn"
 		},
 		{
-			title: "Something",
-			icon: "bomb",
-			content: ballmeripsum,
-			id: "something",
+			title: "More coming soon!",
+			icon: "wrench",
+			content: "<span class='indent'></span>More to come soon! Fun fact: this page was generated almost entirely by JavaScript! Did you notice the wait time? I bet you didn't.",
+			id: "construction",
 			extraClasses: "wow fadeInDown"
 		}
 	];

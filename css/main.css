@@ -206,6 +206,13 @@ h1{
 	bottom: -70px;
 }
 
+.project{
+	padding-left: 300px;
+	background-repeat: no-repeat;
+	background-size: 250px;
+	min-height: 300px;
+}
+
 /*ribbon from css-tricks*/
 
 .ribbon-wrapper-green {
