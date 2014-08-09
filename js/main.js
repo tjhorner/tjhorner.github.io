@@ -44,7 +44,8 @@ window.Site = (function(){
 				$el = $(document.createElement('div'));
 				$el.append('<i class="fa fa-{{icon}}"></i>')
 					.attr('data-icon-for', '{{id}}')
-					.attr('data-active-color', '{{background}}');
+					.attr('data-active-color', '{{background}}')
+					.attr('title', '{{title}}');
 				return $el[0].outerHTML;
 			}())
 		},
