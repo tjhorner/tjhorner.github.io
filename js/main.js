@@ -192,15 +192,17 @@ window.Site = (function(){
 
 	konamiEgg = new Konami();
 	konamiEgg.code = function(){
-		$('.content').fadeOut();
+		$('.content').fadeOut(function(){
+			$gaben = $('<iframe></iframe>').attr('src', 'http://iquestria.net/gaben')
+											.attr('frameborder', '0')
+											.css('width', '100%')
+											.css('height', '100%')
+											.addClass('animated fadeIn');
+			$('body').append($gaben);
+		});
 		$footer.addClass('animated fadeOutDown');
 		$toolbar.addClass('animated fadeOutUp');
 		$sidebar.addClass('animated fadeOutLeft');
-		$gaben = $('<iframe></iframe>').attr('src', 'http://iquestria.net/gaben')
-										.attr('frameborder', '0')
-										.css('width', '100%')
-										.css('height', '100%');
-		$('body').append($gaben);
 	};
 	konamiEgg.load();
 
