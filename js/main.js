@@ -115,13 +115,13 @@ window.Site = (function(){
 			content: (function(){
 				$el = $('<div class="projects"></div>');
 				projects = [
-					{
+					/*{
 						name: "iQuestria",
 						url: "http://iquestria.net",
 						description: "A social network by bronies, for bronies",
 						image: "http://datastorage.iquestria.net/logos/1024.png",
 						id: "iquestria"
-					},
+					},*/
 					{
 						name: "Chattr",
 						url: "http://chattrapp.net",
