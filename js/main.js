@@ -101,7 +101,13 @@ window.Site = (function(){
 					.addClass('center fill animated fadeInDown');
 				return $div[0].outerHTML;
 			}()),
-			id: "about",
+			id: "welcome",
+		},
+		{
+			title: "About Me",
+			icon: "info-circle",
+			content: '<span class="indent"></span>Hey there! I\'m TJ Horner, known as <a href="https://www.google.com/search?q=geekygamer14">GeekyGamer14</a> on the internet. My hobbies include programming, <a href="http://soundcloud.com/geekygamer14">making music</a>, <a href="https://www.youtube.com/watch?v=QmeuSA3tr8I">playing around with my Launchpad</a>, and <a href="http://github.com/GeekyGamer14/magic">creating random and useless scripts</a> when I\'m bored. I also do some serious work such as creating 99% of <a href="http://iquestria.net">iQuestria</a> (which is quite fun actually). I have experience in HTML, PHP, JavaScript, CSS, Java, C++, C#, and a little bit of Shell. As you could probably already tell, I <i>love</i> web development. Front-end and back-end.<br/><br/>Well, I recently re-designed this site so it\'s faster and better looking. Tell me what you think about it by contacting me above!',
+			id: "aboutme"
 		},
 		{
 			title: "Projects",
