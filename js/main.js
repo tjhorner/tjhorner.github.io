@@ -80,7 +80,7 @@ window.Site = (function(){
 		},
 		{
 			title: "Something",
-			icon: "code",
+			icon: "bomb",
 			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.",
 			id: "something"
 		}
@@ -94,7 +94,8 @@ window.Site = (function(){
 		$icon = $(Mustache.render(Site.Templates.SidebarIcon, i));
 		$icon.click(function(){
 			window.location = "#"+i.id;
-		});
+		})
+			.css('background', color);
 		$('.sidebar').append($icon);
 		$('.content').append(Mustache.render(Site.Templates.Block, i));
 	});
@@ -125,6 +126,11 @@ window.Site = (function(){
 			title: "Facebook",
 			icon: "facebook",
 			href: "http://facebook.com/geekygamer14"
+		},
+		{
+			title: "Skype",
+			icon: "skype",
+			href: "skype:tj.a.horner"
 		}
 	]
 
