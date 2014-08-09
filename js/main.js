@@ -26,8 +26,9 @@ window.Site = (function(){
 			Block: (function(){
 				$el = $(document.createElement('div'));
 				$el.addClass('block')
+					.attr('id', '{{id}}')
 					.attr('style', 'background: {{background}}')
-					.append('<h1>{{{title}}}</h1>')
+					.append('<h1><i class="fa fa-{{icon}}"></i> {{{title}}}</h1>')
 					.append('<div class="block-content"><span class="indent"></span>{{{content}}}</div>');
 				return $el[0].outerHTML;
 			}()),
@@ -36,6 +37,14 @@ window.Site = (function(){
 				$el = $(document.createElement('a'));
 				$el.append('<i title="{{title}}" class="fa fa-{{icon}}"></i>')
 					.attr('href', '{{href}}');
+				return $el[0].outerHTML;
+			}()),
+
+			SidebarIcon: (function(){
+				$el = $(document.createElement('div'));
+				$el.append('<i class="fa fa-{{icon}}"></i>')
+					.attr('data-icon-for', '{{id}}')
+					.attr('data-active-color', '{{background}}');
 				return $el[0].outerHTML;
 			}())
 		},
@@ -58,16 +67,22 @@ window.Site = (function(){
 
 	var blocks = [
 		{
-			title: "<i class='fa fa-user'></i> About Me",
-			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
+			title: "About Me",
+			icon: "user",
+			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.",
+			id: "about"
 		},
 		{
-			title: "<i class='fa fa-code'></i> Projects",
-			content: "Developers <a href='developers'>developers</a> developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
+			title: "Projects",
+			icon: "code",
+			content: "Developers <a href='developers'>developers</a> developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.",
+			id: "projects"
 		},
 		{
-			title: "<i class='fa fa-code'></i> ",
-			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share."
+			title: "Something",
+			icon: "code",
+			content: "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.",
+			id: "something"
 		}
 	];
 
@@ -76,6 +91,11 @@ window.Site = (function(){
 		if(o === 0)
 			$('body').css('background', color);
 		i.background = color;
+		$icon = $(Mustache.render(Site.Templates.SidebarIcon, i));
+		$icon.click(function(){
+			window.location = "#"+i.id;
+		});
+		$('.sidebar').append($icon);
 		$('.content').append(Mustache.render(Site.Templates.Block, i));
 	});
 

@@ -51,10 +51,6 @@ body, html{
 	padding-top: 0px;
 }
 
-.sidebar > div.active{
-	background: lightblue;
-}
-
 .sidebar > div:not(.name){
 	margin-top: 30px;
 	padding-top: 5px;
