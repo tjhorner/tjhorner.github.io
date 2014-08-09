@@ -13,7 +13,7 @@ try{
 	console.log("Thanks for not using Internet Explorer!");
 }
 
-
+// THIS IS AS CLOSE AS DYNAMIC AS WE CAN GET
 window.Site = (function(){
 	// from http://davidwalsh.name/vendor-prefix
 	var scrollLast = 0;
@@ -53,7 +53,7 @@ window.Site = (function(){
 					.attr('id', '{{id}}')
 					.attr('style', 'background: {{background}}')
 					.append('<h1><i class="fa fa-{{icon}}"></i> {{{title}}}</h1>')
-					.append('<div class="block-content">{{{content}}}</div>');
+					.append('<div class="{{extraClasses}} block-content">{{{content}}}</div>');
 				return $el[0].outerHTML;
 			}()),
 
@@ -71,6 +71,10 @@ window.Site = (function(){
 					.attr('data-active-color', '{{background}}')
 					.attr('title', '{{title}}');
 				return $el[0].outerHTML;
+			}()),
+
+			Project: (function(){
+
 			}())
 		},
 
@@ -80,6 +84,8 @@ window.Site = (function(){
 		}
 	};
 
+	var templates = Site.Templates;
+
 	var blocks = [
 		{
 			title: "Welcome",
@@ -87,22 +93,24 @@ window.Site = (function(){
 			content: (function(){
 				$div = $('<div></div>');
 				$div.html("<h1>Hi, I'm <span id=\"name-fill\">TJ</span>.</h1><h3>Here's some stuff I do.</h3>")
-					.addClass('center fill');
+					.addClass('center fill animated fadeInDown');
 				return $div[0].outerHTML;
 			}()),
-			id: "about"
+			id: "about",
 		},
 		{
 			title: "Projects",
 			icon: "code",
 			content: ballmeripsum,
-			id: "projects"
+			id: "projects",
+			extraClasses: "wow rollIn"
 		},
 		{
 			title: "Something",
 			icon: "bomb",
 			content: ballmeripsum,
-			id: "something"
+			id: "something",
+			extraClasses: "wow fadeInDown"
 		}
 	];
 
@@ -111,13 +119,13 @@ window.Site = (function(){
 		if(o === 0)
 			$('body').css('background', color);
 		i.background = color;
-		$icon = $(Mustache.render(Site.Templates.SidebarIcon, i));
+		$icon = $(Mustache.render(templates.SidebarIcon, i));
 		$icon.click(function(){
 			window.location = "#"+i.id;
 		})
 			.css('background', color);
 		$('.sidebar').append($icon);
-		$('.content').append(Mustache.render(Site.Templates.Block, i));
+		$('.content').append(Mustache.render(templates.Block, i));
 	});
 
 	var contacts = [
@@ -155,7 +163,7 @@ window.Site = (function(){
 	]
 
 	$.each(contacts, function(o,i){
-		$el = $(Mustache.render(Site.Templates.ContactIcon, i));
+		$el = $(Mustache.render(templates.ContactIcon, i));
 		if(i.listener){
 			$el.click(i.listener);
 		}
@@ -179,6 +187,22 @@ window.Site = (function(){
 	$(document).ready(function(){
 		$('body').removeClass('preload');
 	});
+
+	new WOW().init();
+
+	konamiEgg = new Konami();
+	konamiEgg.code = function(){
+		$('.content').fadeOut();
+		$footer.addClass('animated fadeOutDown');
+		$toolbar.addClass('animated fadeOutUp');
+		$sidebar.addClass('animated fadeOutLeft');
+		$gaben = $('<iframe></iframe>').attr('src', 'http://iquestria.net/gaben')
+										.attr('frameborder', '0')
+										.css('width', '100%')
+										.css('height', '100%');
+		$('body').append($gaben);
+	};
+	konamiEgg.load();
 
 	return Site;
 }());
