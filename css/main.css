@@ -181,6 +181,7 @@ h1{
 
 .block > h1{
 	margin: 0;
+	margin-bottom: 15px;
 	padding-top: 20px;
 	text-align: center;
 }
