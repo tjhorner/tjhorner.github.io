@@ -13,20 +13,20 @@ try{
 	console.log("Thanks for not using Internet Explorer!");
 }
 
-// THIS IS AS CLOSE AS DYNAMIC AS WE CAN GET
+// THIS IS AS CLOSE TO DYNAMIC AS WE CAN GET
 window.Site = (function(){
 	// from http://davidwalsh.name/vendor-prefix
-	var scrollLast = 0;
-	// improve query times
-	$toolbar = $('.toolbar');
-	$sidebar = $('.sidebar');
-	$footer = $('.footer');
 	var s = window.getComputedStyle(document.documentElement, '');
 	var prefix = (Array.prototype.slice
 		.call(s)
 		.join('') 
 		.match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
 	)[1];
+	var scrollLast = 0;
+	// improve query times
+	$toolbar = $('.toolbar');
+	$sidebar = $('.sidebar');
+	$footer = $('.footer');
 	// god damn robots
 	var emCoded = 'bWVAdGpob3JuZXIuY29t';
 	var ballmeripsum = "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.";
