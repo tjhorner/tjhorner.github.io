@@ -28,7 +28,7 @@ window.Site = (function(){
 		.match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
 	)[1];
 	// god damn robots
-	var emCoded = 'Z2Vla3lnYW1lcjE0QGlxdWVzdHJpYS5uZXQ=';
+	var emCoded = 'bWVAdGpob3JuZXIuY29t';
 	var ballmeripsum = "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.";
 	var number1 = Math.floor(Math.random()*10+1);
 	var number2 = Math.floor(Math.random()*20+1);
