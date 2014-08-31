@@ -80,12 +80,21 @@ h1{
 	padding-top: 0px;
 }
 
-.sidebar > div:not(.name){
+.sidebar-icon{
 	margin-top: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 30pt;
 	cursor: hand;
+	transition: .2s box-shadow;
+	-webkit-transition: .2s -webkit-box-shadow;
+	-moz-transition: .2s -moz-box-shadow;
+}
+
+.sidebar-icon:active{
+	-moz-box-shadow: inset 0 0 20px #000000;
+	-webkit-box-shadow: inset 0 0 20px #000000;
+	box-shadow: inset 0 0 20px #000000;
 }
 
 .name{

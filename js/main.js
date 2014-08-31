@@ -32,7 +32,6 @@ window.Site = (function(){
 	var ballmeripsum = "Developers developers developers developers developers developers developers developers developers developers developers programming Whoo! winning powerpoint presentation bing. Windows Whoo! outlook hotmail i have never honestly thrown a chair in my life. Google is not a real company linux is a cancer programming windows. Winning i have never honestly thrown a chair in my life hotmail there's no chance that the iPhone is going to get any significant market share microsoft word i don't know what a monopoly is DEVELOPERS Whoo!. Leadership linux is not in the public domain windows will be everywhere Whoo! google is not a real company there's no chance that the iPhone is going to get any significant market share.";
 	var number1 = Math.floor(Math.random()*10+1);
 	var number2 = Math.floor(Math.random()*20+1);
-	var names = ["a programmer", "GeekyGamer14"];
 
 	var ProveHuman = function(){
 		var answer = prompt("Quick human check! What's "+number1+" + "+number2+"?");
@@ -69,7 +68,8 @@ window.Site = (function(){
 				$el.append('<i class="fa fa-{{icon}}"></i>')
 					.attr('data-icon-for', '{{id}}')
 					.attr('data-active-color', '{{background}}')
-					.attr('title', '{{title}}');
+					.attr('title', '{{title}}')
+					.addClass('sidebar-icon');
 				return $el[0].outerHTML;
 			}()),
 
@@ -115,6 +115,13 @@ window.Site = (function(){
 			content: (function(){
 				$el = $('<div class="projects"></div>');
 				projects = [
+					{
+						name: "Collaborative Launchpad",
+						url: "http://home.tjhorner.com:3000",
+						description: "Control my Novation Launchpad over the internet. Uses Node.js for MIDI interface, express.js for the server and Socket.io for WebSocket stuff. Yes, this all happens on my real Launchpad. It also wakes me up in the middle of the night.",
+						image: "img/launchpad.png",
+						id: "launchpad"
+					},
 					{
 						name: "iQuestria",
 						url: "http://iquestria.net",
