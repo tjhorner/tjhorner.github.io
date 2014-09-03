@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/geekygamer14
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tjhorner.com
+  * I am geekygamer14 (https://keybase.io/geekygamer14) on keybase.
+  * I have a public key with fingerprint A172 4DF5 9428 DA02 997F  5F98 80D2 5371 830E 83B8
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "a1724df59428da02997f5f9880d25371830e83b8",
+            "host": "keybase.io",
+            "key_id": "80d25371830e83b8",
+            "uid": "ba2250100a708a8044f76541bbc93500",
+            "username": "geekygamer14"
+        },
+        "service": {
+            "hostname": "tjhorner.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1409707622,
+    "expire_in": 157680000,
+    "prev": "d2a3539ecf1260a7d80fcb1e2f511fd6d50160fd4dc04d3d3fc8692476c569ad",
+    "seqno": 17,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.2
+Comment: https://keybase.io/crypto
+
+yMHqAnicbVFbSBRRGN7V2nTNNcMMMULGxWBZdO4XQUES66EILcpwYZ2Zc2Z3UmfW
+2dlt1YTFXlIoK7GeErEepAsWBWkXM7GgNFISwURKLaxIIgorMO2M1Fvn5Zzzf5f/
+//hHUhNtTnuKWH3J87h+1j46tByxHXJoShMm6aABK2zCauD6pahaABohQ9VMrBAT
+CY6kgcIINMkDEScFgVMYReB5HJAMxRE8hUOeknjMiwX1sKVANpIYhvmqjmro41cB
+qv6HH1kHJJEkGZzAcZHDeZHHaVrhWIYmJEkWKAbHLWIYGppYBxE7AGFNQwC9DYLG
+mr0YQqKqDK25rfZ/WeaxoG5o0MiX9TqkDxm6qct6LUKCphkqtIRmQ8hiHoeS/6+H
+X1I1gLIjQRQaYVXXsEICMWVTtUwJGhc4nGNJ0ovBWEg1oF+1GAzH8jg6VhsYRZaA
+FCmGEqCsECSLUgEeV2SJgKTCEIQCWIDSsrgCaCDjNKAApcg8K5A0x8oMK4gAs1LV
+azry5tCcYgB5htWAJpoRA2LNw0O+DTa70+bYmGCtz+ZM3vJvqS17Nv3eQU1mrPUe
+2OwAbg+Wk95jv+p6PtlX3uGWsz4S8/sUM/2+72jo4sLXF1n8yOGpV71kee/qwZlP
+aSXx6Uqh5FGR3d2y+87Q/MnX3eHIYtXK+zPXerRv746kNs6kDPY7Wpd/lZ5iYtml
+mV8oZ/bbH14XWMqIc7kD2ypORC933Xw4nL2Wl5BYE+/0uPxl5zLnBpPcbZX9jfOV
+w2lb2+MdrWs7K3edfTK69LK7Ku9D1Dc1dnsi5rrSGbzbnru/1Lc6UnAv0PFgwDGR
+eoO/MJcxvjd2fvpnZlc8OfZmOz3rKaJrry8WFz9LL/s+tthKLY/P9K1UJz5tSzo9
+d+tzjrJQUfAHu5gP5Q==
+=UGXZ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/geekygamer14
+
+==================================================================
