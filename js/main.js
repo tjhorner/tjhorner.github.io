@@ -116,7 +116,7 @@ window.Site = (function(){
 				$el = $('<div class="projects"></div>');
 				projects = [
 					{
-						name: "Collaborative Launchpad",
+						name: "Collaborative Launchpad (always down)",
 						url: "http://home.tjhorner.com:3000",
 						description: "Control my Novation Launchpad over the internet. Uses Node.js for MIDI interface, express.js for the server and Socket.io for WebSocket stuff. Yes, this all happens on my real Launchpad. It also wakes me up in the middle of the night.",
 						image: "img/launchpad.png",
@@ -147,11 +147,11 @@ window.Site = (function(){
 			extraClasses: "wow rollIn"
 		},
 		{
-			title: "More coming soon!",
-			icon: "wrench",
-			content: "<span class='indent'></span>More to come soon! Fun fact: this page was generated almost entirely by JavaScript! Did you notice the wait time? I bet you didn't.",
-			id: "construction",
-			extraClasses: "wow fadeInDown"
+			title: "Music",
+			icon: "music",
+			content: 'I have a passion for music, but have no time to learn how to make music. I sometimes mess around with FL Studio to see what sounds cool and mess around with Performance Mode + Launchpad. Here\'s my favorite SoundClown playlist:<br><br><iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/41714142&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
+			id: "music",
+			extraClasses: "wow slideInLeft"
 		}
 	];
 
