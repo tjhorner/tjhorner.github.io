@@ -1,4 +1,5 @@
 # What inspired me to code?
+###### (basically I reveal all of my embarassing moments)
 
 Going back to when I was 7, I had my HP Pavilion Media Center PC m7000. I was on YouTube looking at random things when I saw an ActionScript tutorial on how to change your cursor inside of a Flash animation. I thought this was amazing, I could get my own stuff on the screen like that. After that, I looked into website creation. At first, I used WYSIWYG editors (first being freewebs.com). I wanted to actually "make" it though. I looked up "how to make webpage" on Google and went through some basic HTML tutorials. I find some other tutorials and follow them completely. I was a Google nerd even back then, I tried all the beta stuff for Google like Google Docs. I literally copy-pasted the website into a Google Doc and edited it. Seriously.
 
