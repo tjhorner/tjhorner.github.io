@@ -126,6 +126,8 @@ h1{
 	z-index: 98;
 	width: 200px;
 	-webkit-animation: flipInX 1s forwards;
+	-moz-animation: flipInX 1s forwards;
+	-o-animation: flipInX 1s forwards;
 	animation: flipInX 1s forwards;
 }
 
