@@ -225,6 +225,26 @@ h1{
 	min-height: 300px;
 }
 
+.soundcloud{
+	height: 200px;
+	width: 200px;
+	background-size: 50px 50px;
+	background-position: center center;
+}
+
+.soundcloud.paused{
+	background-image: url(https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png);
+}
+
+.soundcloud.playing{
+	background-image: url(https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519697-205_CircledPause-128.png);
+}
+
+.soundcloud-art{
+	background-size: 200px 200px;
+	background-position: center center;
+}
+
 /*ribbon from css-tricks*/
 
 .ribbon-wrapper-green {
@@ -278,4 +298,4 @@ h1{
 }
 .ribbon-green:after {
 	right: 0;
-}​
+}
