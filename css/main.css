@@ -246,6 +246,7 @@ h1{
 	background-size: 200px 200px;
 	background-position: center center;
 	position: relative;
+	background: lightgray;
 	width: 200px;
 	height: 200px;
 }
