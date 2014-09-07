@@ -245,8 +245,17 @@ h1{
 .soundcloud-art{
 	background-size: 200px 200px;
 	background-position: center center;
+	position: relative;
 	width: 200px;
 	height: 200px;
+}
+
+.soundcloud-bar{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 2px;
+	background: orange;
 }
 
 /*ribbon from css-tricks*/
