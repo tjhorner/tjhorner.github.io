@@ -246,6 +246,13 @@ window.Site = (function(){
 		$sidebar.addClass('animated fadeOutLeftBig');
 	};
 	konamiEgg.load();
+	
+	var widget = SC.Widget('soundcloud-widget');
+	widget.bind(SC.Widget.Events.READY, function(){
+		widget.getCurrentSound(function(s){
+			$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
+		});
+	});
 
 	return Site;
 }());
