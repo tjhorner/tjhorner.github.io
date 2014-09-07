@@ -252,6 +252,21 @@ window.Site = (function(){
 		widget.getCurrentSound(function(s){
 			$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
 		});
+		
+		widget.bind(SC.Widget.Events.PLAY, function(s){
+			widget.getCurrentSound(function(s){
+				$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
+			});
+			$('.soundcloud').addClass('playing').removeClass('paused');
+		});
+		
+		widget.bind(SC.Widget.Events.PAUSE, function(s){
+			$('.soundcloud').addClass('paused').removeClass('playing');
+		});
+		
+		$('.soundcloud').click(function(){
+			widget.toggle();
+		});
 	});
 
 	return Site;
