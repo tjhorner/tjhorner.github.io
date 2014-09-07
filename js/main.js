@@ -149,7 +149,11 @@ window.Site = (function(){
 		{
 			title: "Music",
 			icon: "music",
-			content: 'I have a passion for music, but have no time to learn how to make music. I sometimes mess around with FL Studio to see what sounds cool and mess around with Performance Mode + Launchpad. Here\'s my favorite SoundClown playlist:<br><br><div class="soundcloud-art"><div class="soundcloud-title">Loading...</div><div class="soundcloud-bar"></div><div class="soundcloud paused"></div></div><iframe id="soundcloud-widget" width="0" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/41714142&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
+			content: 'I have a passion for music, but have no time to learn how to make music. I sometimes mess around with FL Studio to see what sounds cool and mess around with Performance Mode + Launchpad. Here\'s my favorite SoundClown playlist:<br><br>' + 
+
+				'<div class="soundcloud-wrapper"><div class="soundcloud-button back"></div><div class="soundcloud-art"><div class="soundcloud-title">Loading...</div><div class="soundcloud-bar"></div><div class="soundcloud loading"></div></div><div class="soundcloud-button forward"></div></div>' + 
+
+				'<iframe id="soundcloud-widget" width="0" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/41714142&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
 			id: "music",
 			extraClasses: "wow slideInLeft"
 		}
@@ -249,6 +253,17 @@ window.Site = (function(){
 	
 	var widget = SC.Widget('soundcloud-widget');
 	widget.bind(SC.Widget.Events.READY, function(){
+		var updatePercent = function(){
+			widget.getDuration(function(d1){
+				widget.getPosition(function(d2){
+					var percent = (d2 / d1) * 100;
+					$('.soundcloud-bar').css('width', percent + '%');
+				});
+			});
+		}
+
+		widget.setVolume(100);
+		$('.soundcloud').removeClass('loading').addClass('paused');
 		widget.getCurrentSound(function(s){
 			$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
 			$('.soundcloud-title').text(s.title);
@@ -271,16 +286,21 @@ window.Site = (function(){
 		});
 		
 		widget.bind(SC.Widget.Events.PLAY_PROGRESS, function(s){
-			widget.getDuration(function(d1){
-				widget.getPosition(function(d2){
-					var percent = (d2 / d1) * 100;
-					$('.soundcloud-bar').css('width', percent + '%');
-				});
-			});
+			updatePercent();
 		});
 		
 		$('.soundcloud').click(function(){
 			widget.toggle();
+		});
+
+		$('.soundcloud-button.forward').click(function(){
+			widget.next();
+			updatePercent();
+		});
+
+		$('.soundcloud-button.back').click(function(){
+			widget.prev();
+			updatePercent();
 		});
 	});
 

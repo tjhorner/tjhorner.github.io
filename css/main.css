@@ -225,9 +225,14 @@ h1{
 	min-height: 300px;
 }
 
+.soundcloud-wrapper{
+	display: table;
+	margin: 0 auto;
+}
+
 .soundcloud{
-	height: 500px;
-	width: 500px;
+	height: 400px;
+	width: 400px;
 	background-size: 100px 100px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -235,20 +240,25 @@ h1{
 }
 
 .soundcloud.paused{
-	background-image: url(https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-512.png);
+	background-image: url(../img/play.png);
 }
 
 .soundcloud.playing{
-	background-image: url(https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519697-205_CircledPause-128.png);
+	background-image: url(../img/pause.png);
+}
+
+.soundcloud.loading{
+	background-image: url(../img/loading.gif);
 }
 
 .soundcloud-art{
+	display: inline-block;
 	background-color: lightgray;
-	background-size: 500px 500px;
+	background-size: 400px 400px;
 	background-position: center center;
 	position: relative;
-	width: 500px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 }
 
 .soundcloud-bar{
@@ -263,12 +273,44 @@ h1{
 	background: rgba(0, 0, 0, 0.4);
 	padding: 5px;
 	color: white;
-	font-size: 10pt;
+	font-size: 12pt;
 	border-bottom: 1px solid black;
 	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 5;
+}
+
+.soundcloud-button{
+	height: 400px;
+	width: 100px;
+	background: black;
+	display: inline-block;
+	background-size: 50px 50px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: hand;
+	transition: .2s box-shadow;
+	-webkit-transition: .2s box-shadow;
+	-moz-transition: .2s box-shadow;
+	z-index: 4;
+}
+
+.soundcloud-button:active{
+	box-shadow: inset 0px 0px 10px white;
+}
+
+.soundcloud-button.forward{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-image: url(../img/fwd.png);
+}
+
+.soundcloud-button.back{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-image: url(../img/back.png);
 }
 
 /*ribbon from css-tricks*/
