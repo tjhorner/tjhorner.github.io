@@ -231,6 +231,7 @@ h1{
 	background-size: 50px 50px;
 	background-position: center center;
 	background-repeat: no-repeat;
+	cursor: hand;
 }
 
 .soundcloud.paused{
