@@ -262,16 +262,20 @@ window.Site = (function(){
 			});
 		}
 
-		widget.setVolume(100);
+		var hiRes = function(s){
+			return s.replace(/large.jpg/g, "t500x500.jpg");
+		}
+
+		widget.setVolume(50);
 		$('.soundcloud').removeClass('loading').addClass('paused');
 		widget.getCurrentSound(function(s){
-			$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
+			$('.soundcloud-art').css('background-image', 'url('+hiRes(s.artwork_url)+')');
 			$('.soundcloud-title').text(s.title);
 		});
 		
 		widget.bind(SC.Widget.Events.PLAY, function(s){
 			widget.getCurrentSound(function(s){
-				$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
+				$('.soundcloud-art').css('background-image', 'url('+hiRes(s.artwork_url)+')');
 				$('.soundcloud-title').text(s.title);
 			});
 			$('.soundcloud').addClass('playing').removeClass('paused');
