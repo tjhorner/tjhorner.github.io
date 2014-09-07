@@ -251,6 +251,7 @@ window.Site = (function(){
 	widget.bind(SC.Widget.Events.READY, function(){
 		widget.getCurrentSound(function(s){
 			$('.soundcloud-art').css('background-image', 'url('+s.artwork_url+')');
+			$('.soundcloud-title').text(s.title);
 		});
 		
 		widget.bind(SC.Widget.Events.PLAY, function(s){
