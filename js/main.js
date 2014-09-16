@@ -110,6 +110,12 @@ window.Site = (function(){
 			id: "aboutme"
 		},
 		{
+			title: "Blog",
+			icon: "pencil",
+			content: "Sometimes I write on my blog about things like hackathons. Stuff like that. Oh, it's also powered by Keystone.js. Go check it out at <a href='http://write.tjhorner.com'>write.tjhorner.com</a>.<br><br><iframe src='http://write.tjhorner.com' frameborder='0' width='100%' height='70%'></iframe>",
+			id: "blog"
+		},
+		{
 			title: "Projects",
 			icon: "code",
 			content: (function(){
