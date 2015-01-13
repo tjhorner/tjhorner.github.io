@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,700|Roboto:400,700|VT323);
+
+/* fix stupid */
+
+*{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body{
+  font-family: "Roboto", "Open Sans", "Helvetica", "Arial";
+  max-width: 100%;
+}
+
+h1, h2{
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.logo{
+  font-family: "Pacifico";
+  text-decoration: none;
+  color: black;
+}
+
+.logo .part1, .logo .part2{
+  transition: color .2s;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+}
+
+.logo:hover .part2{
+  color: rgb(166, 107, 191);
+}
+
+.logo:hover .part1{
+  color: rgb(157, 218, 247);
+}
+
+/* shitstorm */
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+.group:after {
+  clear:both;
+}
+.group {
+  zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+  width: 100%;
+}
+.span_4_of_5 {
+  width: 79.8%;
+}
+.span_3_of_5 {
+  width: 59.6%;
+}
+.span_2_of_5 {
+  width: 39.4%;
+}
+.span_1_of_5 {
+  width: 19.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_5_of_5 {
+    width: 100%;
+  }
+  .span_4_of_5 {
+    width: 100%;
+  }
+  .span_3_of_5 {
+    width: 100%;
+  }
+  .span_2_of_5 {
+    width: 100%;
+  }
+  .span_1_of_5 {
+    width: 100%;
+  }
+
+  div.hero h1{
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .nav .nav-links{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    border: 1px solid rgb(157, 218, 247);
+    border-radius: 2px;
+  }
+
+  .nav .nav-links a{
+    color: black !important;
+    display: block;
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+    max-height: 19px;
+    font-size: 1.2em;
+    text-transform: initial !important;
+  }
+
+  /* i have no idea why it does this but this is a hacky way of fixing it */
+  .nav .nav-links a:nth-of-type(1){
+    bottom: 0px;
+    position: relative;
+  }
+
+  .nav .nav-links::before{
+    content: "MENU";
+    opacity: 1 !important;
+    visibility: visible;
+    float: right;
+    position: relative;
+    top: -40px;
+    right: 10px;
+  }
+
+  .nav .nav-links:hover{
+    visibility: visible;
+  }
+}

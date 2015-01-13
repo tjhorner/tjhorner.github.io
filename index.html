@@ -1,31 +1,117 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>TJ Horner</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="shortcut icon" href="http://gravatar.com/avatar/eeadfdd648bb640c78cda62b675885cf?s=30">
-	<meta name="google-site-verification" content="a_d680CSJEbGRE8Kb1wkCFSN1kiJ7eGArhCHmdUWvEs" />
+  <title>TJ Horner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
+  <script charset="utf-8" src="//code.jquery.com/jquery.js"></script>
+  <script charset="utf-8" src="/js/main.js"></script>
 </head>
-<body class="preload">
-	<a class="codeday" href="http://codeday.org/sandiego" target="_blank" data-title="Register for CodeDay SD!"></a>
-	<div class="toolbar animated fadeInDown"></div>
-	<div class="sidebar animated fadeInLeft">
-		<div class="name" data-tooltip="TJ Horner"></div>
-	</div>
-	<div class="content"></div>
-	<div class="footer animated fadeInUpBig">&copy; TJ Horner 2014. Hosted on <a href="http://github.com/geekygamer14/geekygamer14.github.io">GitHub Pages</a>. Every good site has easter eggs nowadays. Try to find mine!</div>
-	<!-- 
-			wow
-			very script
-			such jquery
-	-->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
-	<script type="text/javascript" src="js/mustache.js"></script>
-	<script type="text/javascript" src="js/konami.js"></script>
-	<script type="text/javascript" src="js/please.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+<body>
+  <header class="transparent">
+    <div class="nav">
+      <a href="#">TJ Horner</a>
+      <!-- <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#hackathons">Hackathons</a>
+      </div> -->
+    </div>
+  </header>
+  <div class="content no-margin">
+    <div class="hero" style="background-image: url(/img/code.png)">
+      <h1>Hi, I'm TJ.</h1>
+    </div>
+    <section style="background-color: rgb(20, 21, 23)" class="white">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>About Me</h2>
+        </div>
+        <div class="col span_4_of_5">
+          My name's TJ Horner, I'm <span id="age">14</span> years old and love programming. I like going to hackathons and creating awesome stuff!
+          I've been programming ever since I was 7 in ActionScript. You can read more about it on my
+          <a href="http://write.tjhorner.com/blog/post/what-inspired-me-to-learn-how-to-code">blog post</a>.
+        </div>
+      </div>
+    </section>
+    <section style="background-color: rgb(157, 218, 247)">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Projects</h2>
+        </div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Collaborative Launchpad</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Control my Novation Launchpad over the internet. Uses Node.js for MIDI interface, express.js for the server and Socket.io for WebSocket stuff.
+          Yes, this all happens on my real Launchpad. It also wakes me up in the middle of the night.<br>
+          <b>GitHub:</b> <a href="https://github.com/tjhorner/collaborative-launchpad">https://github.com/tjhorner/collaborative-launchpad</a>
+        </div>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Soundsync</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Soundsync is an Android app that lets you control Soundcloud on your desktop from your phone. You can also cast to your Google Cast-enabled
+          device which is great for parties, meetups, or even hackathons!<br>
+          <b>GitHub:</b> <a href="https://github.com/tjhorner/soundsync">https://github.com/tjhorner/soundsync</a>
+        </div>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_4_of_5">
+          <b>More projects coming soon!</b>
+        </div>
+      </div>
+    </section>
+    <section style="background-color: rgb(20, 21, 23)" class="white">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Hackathons</h2>
+        </div>
+        <div class="col span_4_of_5">
+          I love attending hackathons! Here are some hackathons I'll be going to in the Winter season:
+        </div>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://pennapps.com"><img src="http://2015s.pennapps.com/assets/images/logo-main.svg" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>January 16 - 18, 2015</b><br>
+          PennApps is the premier student-run college hackathon. More than a thousand student programmers from all over the world converge on
+          Philadelphia twice a year for a weekend of creating and learning. Hackathons are about coding together to solve real-world problems.
+          Students work in teams of up to four people for thirty-six hours to create a web, mobile, or hardware application. PennApps has been
+          around for a long time, and we're soon going to be celebrating our eleventh iteration.<br>
+        </div>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://hackgeny.com"><img src="http://hackgeny.com/static/wp-content/themes/hackgeny/assets/img/whitelogo.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>January 24 - 25, 2015</b><br>
+          Today's youth hacking tomorrow's future. Hack Gen Y is a hackathon for high school hackers in Silicon Valley.<br>
+        </div>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_4_of_5">
+          <b>More hackathons coming soon!</b>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    &copy; TJ Horner 2015
+  </footer>
 </body>
 </html>
