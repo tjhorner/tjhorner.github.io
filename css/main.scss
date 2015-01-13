@@ -21,6 +21,32 @@ a{
   }
 }
 
+.pull-right{
+  float: right;
+}
+
+.social.fa{
+  margin-left: 5px;
+  font-size: 1.5em;
+  color: black;
+  transition: color .2s;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+
+  &.fa-twitter:hover{
+    color: #4099FF;
+  }
+
+  &.fa-facebook:hover{
+    color: #3B5998;
+  }
+
+  &.fa-github:hover{
+    color: gray;
+  }
+}
+
 header{
   padding-top: 10px;
   padding-bottom: 10px;
