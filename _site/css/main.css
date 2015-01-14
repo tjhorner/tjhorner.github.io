@@ -34,6 +34,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
   border-bottom: 1px dotted lightgray; }
   header.transparent {
     background: rgba(0, 0, 0, 0.5);
@@ -65,10 +66,15 @@ header {
   color: white; }
 
 footer {
-  max-width: 1100px;
-  padding: 0 10px;
-  margin: 10px auto;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  z-index: 10;
+  position: relative;
+  background: white;
+  padding: 10px 0; }
+  footer .inside-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px; }
 
 body {
   margin: 0; }
@@ -83,18 +89,32 @@ div.hero {
   left: 0;
   background-size: cover;
   background-position: center center;
-  z-index: 1;
+  z-index: 5;
   color: white; }
   div.hero h1 {
     padding-top: 240px;
     padding-bottom: 200px;
     font-size: 3em;
-    text-align: center; }
+    text-align: center;
+    z-index: 10;
+    position: relative; }
+  div.hero video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
+    -moz-filter: blur(5px); }
 
 section {
   display: block;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  z-index: 10;
+  position: relative; }
   section div.group {
     max-width: 900px;
     margin: 0 auto; }
