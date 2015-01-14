@@ -118,6 +118,11 @@ h1, h2{
     padding-bottom: 100px;
   }
 
+  div.hero video{
+    width: initial !important;
+    height: 100%;
+  }
+
   .nav .nav-links{
     visibility: hidden;
     position: absolute;
