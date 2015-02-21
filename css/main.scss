@@ -152,7 +152,7 @@ div.hero{
   }
 
   video{
-    position: fixed;
+    position: fixed; // Don't change this to absolute whatever you do! It will break mobile.
     top: 0;
     left: 0;
     z-index: 5;
