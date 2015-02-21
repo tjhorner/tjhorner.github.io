@@ -33,6 +33,7 @@ a{
   -webkit-transition: color .2s;
   -moz-transition: color .2s;
   -o-transition: color .2s;
+  cursor: pointer;
 
   &.fa-twitter:hover{
     color: #4099FF;
@@ -44,6 +45,10 @@ a{
 
   &.fa-github:hover{
     color: gray;
+  }
+
+  &.fa-usd:hover{
+    color: darkgreen;
   }
 }
 

@@ -19,13 +19,16 @@ a {
   transition: color .2s;
   -webkit-transition: color .2s;
   -moz-transition: color .2s;
-  -o-transition: color .2s; }
+  -o-transition: color .2s;
+  cursor: pointer; }
   .social.fa.fa-twitter:hover {
     color: #4099FF; }
   .social.fa.fa-facebook:hover {
     color: #3B5998; }
   .social.fa.fa-github:hover {
     color: gray; }
+  .social.fa.fa-usd:hover {
+    color: darkgreen; }
 
 header {
   padding-top: 10px;
