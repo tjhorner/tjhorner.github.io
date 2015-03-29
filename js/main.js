@@ -34,11 +34,16 @@ Site = (function(){
         $("#term-skip").fadeIn();
       }, 5000);
 
+      if(window.location.hash === "#skip"){
+        $(".content").removeClass("setup");
+        $("#terminal").slideUp();
+        $("#intro-completed").text("");
+      }
+
       $("#term-skip").click(function(){
         $(".content").removeClass("setup");
         $("#terminal").slideUp();
         $("#intro-completed").text("");
-        $typer.stop();
       })
     });
 
