@@ -8,6 +8,31 @@ $ponytones-purple: rgb(166, 107, 191);
 $ponytones-darkpurple: rgb(28, 151, 211);
 $hacker-green: rgb(0, 255, 0);
 
+#terminal{
+  color: $hacker-green;
+  background: black;
+  font-family: monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5em;
+
+  a{
+    background: $hacker-green;
+    color: black;
+    margin-right: 5px;
+  }
+
+  .term-social{
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
 a{
   transition: color .2s;
   -webkit-transition: color .2s;
@@ -132,6 +157,15 @@ body{
   width: 100%;
   margin-top: 48px;
   border-bottom: 1px dotted lightgray;
+
+  &.setup{
+    display: none;
+  }
+}
+
+.subtitle{
+  font-size: .75em;
+  line-height: 3px;
 }
 
 div.hero{
