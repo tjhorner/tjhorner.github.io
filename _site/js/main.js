@@ -12,6 +12,41 @@ Site = (function(){
   }, 10);
 
   $(document).ready(function(){
+    $(function(){
+      $(".content").addClass("setup");
+      var $typer = $(".term-text").typed({
+        strings: [
+          "Hi.",
+          "How are you?",
+          "Welcome to my website.",
+          "This is awkward...^1000 I'll get some stuff set up, stay right here.",
+          "^2000Here we go!^1000"],
+        cursorChar: "_",
+        typeSpeed: 20,
+        callback: function(){
+          $(".content").removeClass("setup");
+          $("#terminal").slideUp();
+          $("#intro-completed").show();
+        }
+      });
+
+      setTimeout(function(){
+        $("#term-skip").fadeIn();
+      }, 2000);
+
+      if(window.location.hash === "#skip"){
+        $(".content").removeClass("setup");
+        $("#terminal").slideUp();
+        $("#intro-completed").text("");
+      }
+
+      $("#term-skip").click(function(){
+        $(".content").removeClass("setup");
+        $("#terminal").slideUp();
+        $("#intro-completed").text("");
+      })
+    });
+
     $age = $('#age');
 
     if(new Date() < internDate){

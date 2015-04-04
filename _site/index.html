@@ -7,9 +7,21 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="/css/fontawesome/font-awesome.css" media="screen" title="no title" charset="utf-8"> -->
   <script charset="utf-8" src="//code.jquery.com/jquery.js"></script>
+  <script charset="utf-8" src="/js/html2canvas.min.js"></script>
+  <script charset="utf-8" src="/js/glitch.js"></script>
+  <script charset="utf-8" src="/js/typed.min.js"></script>
   <script charset="utf-8" src="/js/main.js"></script>
 </head>
 <body>
+  <div id="terminal">
+    <span class="term-text"></span>
+    <br><br>
+    <a href="#" id="term-skip" style="display: none">Skip</a>
+    <div class="term-social">
+      <a href="http://twitter.com/tjhorner">Twitter</a>
+      <a href="http://github.com/tjhorner">GitHub</a>
+    </div>
+  </div>
   <header class="transparent">
     <div class="nav">
       <a href="#">TJ Horner</a>
@@ -22,7 +34,10 @@
   </header>
   <div class="content no-margin">
     <div class="hero" style="background-image: url(/img/code.png)">
-      <h1>Hi, I'm TJ.</h1>
+      <h1>
+        Hi, I'm TJ.
+        <span class="subtitle" id="intro-completed" style="display: none"><br>Welcome to my actual website.</span>
+      </h1>
       <div>
         <video src="/img/code.webm" autoplay loop></video>
       </div>

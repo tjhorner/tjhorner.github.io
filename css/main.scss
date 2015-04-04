@@ -21,10 +21,30 @@ $hacker-green: rgb(0, 255, 0);
   width: 100%;
   font-size: 1.5em;
 
+  *::selection{
+    background: $hacker-green;
+    color: black;
+  }
+
+  *::-moz-selection{
+    background: $hacker-green;
+    color: black;
+  }
+
   a{
     background: $hacker-green;
     color: black;
     margin-right: 5px;
+
+    &::selection{
+      background: black !important;
+      color: $hacker-green !important;
+    }
+
+    &::-moz-selection{
+      background: black !important;
+      color: $hacker-green !important;
+    }
   }
 
   .term-social{

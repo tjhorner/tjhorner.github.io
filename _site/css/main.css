@@ -1,4 +1,36 @@
 @import url(responsive.css);
+#terminal {
+  color: lime;
+  background: black;
+  font-family: monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5em; }
+  #terminal *::selection {
+    background: lime;
+    color: black; }
+  #terminal *::-moz-selection {
+    background: lime;
+    color: black; }
+  #terminal a {
+    background: lime;
+    color: black;
+    margin-right: 5px; }
+    #terminal a::selection {
+      background: black !important;
+      color: lime !important; }
+    #terminal a::-moz-selection {
+      background: black !important;
+      color: lime !important; }
+  #terminal .term-social {
+    position: absolute;
+    bottom: 10px; }
+
 a {
   transition: color .2s;
   -webkit-transition: color .2s;
@@ -86,6 +118,12 @@ body {
   width: 100%;
   margin-top: 48px;
   border-bottom: 1px dotted lightgray; }
+  .content.setup {
+    display: none; }
+
+.subtitle {
+  font-size: .75em;
+  line-height: 3px; }
 
 div.hero {
   top: 0;
