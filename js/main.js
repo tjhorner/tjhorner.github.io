@@ -84,5 +84,5 @@ load = function(data){
   $("#project").text(data.toggl.project);
   $("#project-description").text(data.toggl.entry);
   var lastUpdated = new Date(data.toggl.lastUpdated);
-  $("#project-last-updated").text((lastUpdated.getHours() > 12 ? (lastUpdated.getHours() - 12) : lastUpdated.getHours()) + ":" + lastUpdated.getMinutes());
+  $("#project-last-updated").text((lastUpdated.getHours() > 12 ? (lastUpdated.getHours() - 12) : lastUpdated.getHours()) + ":" + (lastUpdated.getMinutes() < 10 ? ("0" + lastUpdated.getMinutes()) : lastUpdated.getMinutes());
 }
