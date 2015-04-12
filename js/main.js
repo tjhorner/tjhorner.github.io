@@ -79,7 +79,7 @@ Site = (function(){
 
 load = function(data){
   if(!data.toggl.current){
-    $("#project-tense").text("I was");
+    $("#project-tense").text("I was last");
   }
   $("#project").text(data.toggl.project);
   $("#project-description").text(data.toggl.entry);
