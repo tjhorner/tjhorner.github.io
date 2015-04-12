@@ -78,7 +78,7 @@ Site = (function(){
 }());
 
 load = function(data){
-  if(data.toggl.current){
+  if(!data.toggl.current){
     $("#project-tense").text("I was");
   }
   $("#project").text(data.toggl.project);
