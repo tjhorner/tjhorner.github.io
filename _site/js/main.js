@@ -9,7 +9,7 @@ Site = (function(){
 
     var majorMinor = years.toFixed(9).toString().split('.');
     $age.text(majorMinor[0] + "." + majorMinor[1]);
-  }, 10);
+  }, 100);
 
   $(document).ready(function(){
     $(function(){
@@ -75,4 +75,14 @@ Site = (function(){
       handler.close();
     });
   });
-}())
+}());
+
+load = function(data){
+  if(data.toggl.current){
+    $("#project-tense").text("I was");
+  }
+  $("#project").text(data.toggl.project);
+  $("#project-description").text(data.toggl.entry);
+  var lastUpdated = new Date(data.toggl.lastUpdated);
+  $("#project-last-updated").text((lastUpdated.getHours() > 12 ? (lastUpdated.getHours() - 12) : lastUpdated.getHours()) + ":" + lastUpdated.getMinutes());
+}
