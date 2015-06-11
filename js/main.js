@@ -20,7 +20,7 @@ Site = (function(){
           "How are you?",
           "Welcome to my website.",
           "This is awkward...^1000 I'll get some stuff set up, stay right here.",
-          "^2000Here we go!^1000"],
+          "^1000Here we go!^1000"],
         cursorChar: "_",
         typeSpeed: 20,
         callback: function(){

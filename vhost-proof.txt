@@ -2,4 +2,7 @@ Hi!
 
 I, known as "tj" or "tjhorner" on IRC own the domain tjhorner.com.
 
-That's basically it.
+I only authorize this domain to be used as a Vhost if I send a message
+signed with my public key: https://keybase.io/tjhorner/key.asc
+
+If I don't send a message signed with it, it's not me.
