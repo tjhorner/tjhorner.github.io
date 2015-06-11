@@ -61,6 +61,8 @@ a {
     color: gray; }
   .social.fa.fa-usd:hover {
     color: darkgreen; }
+  .social.fa.fa-key:hover {
+    color: #FC8346; }
 
 header {
   padding-top: 10px;
