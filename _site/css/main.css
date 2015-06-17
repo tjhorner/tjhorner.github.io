@@ -201,3 +201,11 @@ section {
 
 .mute {
   opacity: 0.7; }
+
+.music-display {
+  padding-left: 110px;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  height: 100px;
+  min-width: 100px;
+  font-size: 1.5em; }

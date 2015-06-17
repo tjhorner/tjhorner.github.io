@@ -58,7 +58,7 @@ Site = (function(){
 
     var handler = StripeCheckout.configure({
       key: 'pk_live_wjdMqy4jpe6g4WtqWUyqmDge',
-      image: 'http://gravatar.com/avatar/eeadfdd648bb640c78cda62b675885cf?s=100',
+      image: 'https://gravatar.com/avatar/eeadfdd648bb640c78cda62b675885cf?s=100',
       token: function(token) { }
     });
 
@@ -78,6 +78,7 @@ Site = (function(){
 }());
 
 load = function(data){
+  // Toggl
   if(!data.toggl.current){
     $("#project-tense").text("I was last");
   }
@@ -85,4 +86,12 @@ load = function(data){
   $("#project-description").text(data.toggl.entry);
   var lastUpdated = new Date(data.toggl.lastUpdated);
   $("#project-last-updated").text((lastUpdated.getHours() > 12 ? (lastUpdated.getHours() - 12) : lastUpdated.getHours()) + ":" + (lastUpdated.getMinutes() < 10 ? ("0" + lastUpdated.getMinutes()) : lastUpdated.getMinutes()));
+
+  // Last.fm
+  if(data.lastfm.playing){
+    $("#music-tense").text("Here's what I'm listening to right now!");
+  }
+  $(".music-display").css("background-image", "url(" + data.lastfm.image + ")");
+  $("#music-track").text(data.lastfm.track);
+  $("#music-artist").text(data.lastfm.artist);
 }
