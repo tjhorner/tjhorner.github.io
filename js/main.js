@@ -57,7 +57,7 @@ Site = (function(){
     }
 
     var handler = StripeCheckout.configure({
-      key: 'pk_live_wjdMqy4jpe6g4WtqWUyqmDge',
+      key: 'pk_live_lUHrW5Ew681dVjezph8ZZpoB',
       image: 'https://gravatar.com/avatar/eeadfdd648bb640c78cda62b675885cf?s=100',
       token: function(token) { }
     });
