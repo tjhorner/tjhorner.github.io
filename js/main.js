@@ -64,8 +64,8 @@ Site = (function(){
 
     $('#donate').on('click', function(e) {
       handler.open({
-        name: "TJ Horner",
-        description: "You're awesome!",
+        name: "Donation to TJ Horner",
+        description: "I wanted to implement the Stripe API somewhere.",
         amount: 100
       });
       e.preventDefault();
