@@ -94,4 +94,14 @@ load = function(data){
   $(".music-display").css("background-image", "url(" + data.lastfm.image + ")");
   $("#music-track").text(data.lastfm.track);
   $("#music-artist").text(data.lastfm.artist);
+
+  if(data.steam.game.playing){
+    var statusHtml = "I'm playing <a href='http://store.steampowered.com/app/" + data.steam.game.appid + "/'>" + data.steam.game.title + "</a>.";
+    if(data.steam.game.server){
+      statusHtml += " You can <a href='steam://connect/" + data.steam.game.server + "'>join me</a> if you want!";
+    }
+    statusHtml += "<br><br>";
+    $("#steam-status").html(statusHtml);
+    $("#steam-img").attr("src", data.steam.game.images.logo).fadeIn("fast");
+  }
 }
