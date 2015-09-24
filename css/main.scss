@@ -101,10 +101,11 @@ a{
   &.fa-key:hover{
     color: #FC8346;
   }
+}
 
-  &.fa-paper-plane:hover{
-    color: #2CA5E0;
-  }
+// it doesn't work with .social.fa.fa-paper-plane. what the fuck?
+.fa-paper-plane:hover{
+  color: #2CA5E0;
 }
 
 header{
