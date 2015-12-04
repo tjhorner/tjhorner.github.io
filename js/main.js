@@ -2,7 +2,7 @@ Site = (function(){
   var dob = new Date("3 December 2000 21:00:00");
   var internDate = new Date("24 February 2015 00:00:00");
 
-  var socket = io();
+  var socket = io.connect("ws://me.tjhorner.com");
 
   socket.on("surprise", function(surpriseData){
     surpriseData.assets.javascript.forEach(function(script){
