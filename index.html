@@ -225,7 +225,7 @@
   <script src="https://me.tjhorner.com/jsonp"></script>
 
   <script>
-    (function(){
+    $(document).ready(function(){
       var socket = io.connect("http://me.tjhorner.com");
 
       socket.on("surprise", function(surpriseData){
@@ -241,7 +241,7 @@
           eval(code);
         });
       });
-    }())
+    });
   </script>
 </body>
 </html>
