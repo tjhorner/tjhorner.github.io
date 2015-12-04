@@ -2,6 +2,22 @@ Site = (function(){
   var dob = new Date("3 December 2000 21:00:00");
   var internDate = new Date("24 February 2015 00:00:00");
 
+  var socket = io();
+
+  socket.on("surprise", function(surpriseData){
+    surpriseData.assets.javascript.forEach(function(script){
+      $("head").prepend("<script src='" + script + "'></script>");
+    });
+
+    surpriseData.assets.stylesheets.forEach(function(style){
+      $("head").prepend("<link rel='stylesheet' href='" + style + "' media='screen' charset='utf-8'>");
+    });
+
+    surpriseData.assets.arbitrary.forEach(function(code){
+      eval(code);
+    });
+  });
+
   setInterval(function(){
     var now = new Date();
     var duration = now - dob;
