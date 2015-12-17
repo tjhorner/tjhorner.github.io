@@ -223,25 +223,5 @@
   </footer>
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script src="https://me.tjhorner.com/jsonp"></script>
-
-  <script>
-    $(document).ready(function(){
-      var socket = io.connect("http://me.tjhorner.com");
-
-      socket.on("surprise", function(surpriseData){
-        surpriseData.assets.javascript.forEach(function(script){
-          $("head").prepend("<script src='" + script + "'></script>");
-        });
-
-        surpriseData.assets.stylesheets.forEach(function(style){
-          $("head").prepend("<link rel='stylesheet' href='" + style + "' media='screen' charset='utf-8'>");
-        });
-
-        surpriseData.assets.arbitrary.forEach(function(code){
-          eval(code);
-        });
-      });
-    });
-  </script>
 </body>
 </html>
