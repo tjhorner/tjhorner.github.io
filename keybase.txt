@@ -1,65 +1,68 @@
 ==================================================================
-https://keybase.io/geekygamer14
+https://keybase.io/tjhorner
 --------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am an admin of http://tjhorner.com
-  * I am geekygamer14 (https://keybase.io/geekygamer14) on keybase.
-  * I have a public key with fingerprint A172 4DF5 9428 DA02 997F  5F98 80D2 5371 830E 83B8
+  * I am an admin of https://tjhorner.com
+  * I am tjhorner (https://keybase.io/tjhorner) on keybase.
+  * I have a public key with fingerprint 00B1 86BC D697 A970 FAA9  F05D 1DF2 ABAB D57D 6984
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "a1724df59428da02997f5f9880d25371830e83b8",
+            "eldest_kid": "0101c9b7e07ea6ba5d3f63062372c0e79cf9cde72337765888f3e395e076cb00a4490a",
+            "fingerprint": "00b186bcd697a970faa9f05d1df2ababd57d6984",
             "host": "keybase.io",
-            "key_id": "80d25371830e83b8",
-            "uid": "ba2250100a708a8044f76541bbc93500",
-            "username": "geekygamer14"
+            "key_id": "1df2ababd57d6984",
+            "kid": "0101c9b7e07ea6ba5d3f63062372c0e79cf9cde72337765888f3e395e076cb00a4490a",
+            "uid": "2d644e335f690b84272a327255168819",
+            "username": "tjhorner"
         },
         "service": {
             "hostname": "tjhorner.com",
-            "protocol": "http:"
+            "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1409707622,
+    "ctime": 1470749194,
     "expire_in": 157680000,
-    "prev": "d2a3539ecf1260a7d80fcb1e2f511fd6d50160fd4dc04d3d3fc8692476c569ad",
-    "seqno": 17,
+    "prev": "6f70b8c9f95dcd28c51ee40c58705f254645b29b4477140a66f3b44c53e4d6bc",
+    "seqno": 19,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v1.0.2
+Version: Keybase OpenPGP v2.0.55
 Comment: https://keybase.io/crypto
 
-yMHqAnicbVFbSBRRGN7V2nTNNcMMMULGxWBZdO4XQUES66EILcpwYZ2Zc2Z3UmfW
-2dlt1YTFXlIoK7GeErEepAsWBWkXM7GgNFISwURKLaxIIgorMO2M1Fvn5Zzzf5f/
-//hHUhNtTnuKWH3J87h+1j46tByxHXJoShMm6aABK2zCauD6pahaABohQ9VMrBAT
-CY6kgcIINMkDEScFgVMYReB5HJAMxRE8hUOeknjMiwX1sKVANpIYhvmqjmro41cB
-qv6HH1kHJJEkGZzAcZHDeZHHaVrhWIYmJEkWKAbHLWIYGppYBxE7AGFNQwC9DYLG
-mr0YQqKqDK25rfZ/WeaxoG5o0MiX9TqkDxm6qct6LUKCphkqtIRmQ8hiHoeS/6+H
-X1I1gLIjQRQaYVXXsEICMWVTtUwJGhc4nGNJ0ovBWEg1oF+1GAzH8jg6VhsYRZaA
-FCmGEqCsECSLUgEeV2SJgKTCEIQCWIDSsrgCaCDjNKAApcg8K5A0x8oMK4gAs1LV
-azry5tCcYgB5htWAJpoRA2LNw0O+DTa70+bYmGCtz+ZM3vJvqS17Nv3eQU1mrPUe
-2OwAbg+Wk95jv+p6PtlX3uGWsz4S8/sUM/2+72jo4sLXF1n8yOGpV71kee/qwZlP
-aSXx6Uqh5FGR3d2y+87Q/MnX3eHIYtXK+zPXerRv746kNs6kDPY7Wpd/lZ5iYtml
-mV8oZ/bbH14XWMqIc7kD2ypORC933Xw4nL2Wl5BYE+/0uPxl5zLnBpPcbZX9jfOV
-w2lb2+MdrWs7K3edfTK69LK7Ku9D1Dc1dnsi5rrSGbzbnru/1Lc6UnAv0PFgwDGR
-eoO/MJcxvjd2fvpnZlc8OfZmOz3rKaJrry8WFz9LL/s+tthKLY/P9K1UJz5tSzo9
-d+tzjrJQUfAHu5gP5Q==
-=UGXZ
+yMImAnicrVJbSFRBGF7zEi4IBVGGJXTKCjKbc50zKyWkIV2QzMI2q/WcOXPck7Zn
+O3vWC5sRFRWR9GKlYNLdTOvBCsWkzMSoXiyyh+0lCioRutJKlltzpF6ix+Zhhv//
+v++b75/5B9MSXe6E+Z87OkbqjUMJj+81hV2l7VF3hFFNrY7xRJhKMnWQKo2EbF+l
+oTEeBrCAxUiFBECiSKoiarwu8UDieMhhQCDCOsIagRzPQyiJsizrPOGRSPESVgFQ
+BAEBhclmdCNQQaygZQRsRxaorCypWJMQVBAEuqIgHYgaq+mcoiqqJkJakgVK9Jsh
+h0HNqUqI5BgmzdHAN2XvH/j/7Ds8JcdpkiAQnhd1CQFVFjjIKTzdRJGVZJlFDjBE
+rICym1C0vctvWgFiMfXZDM1WG5g4D+t08hciB5u7KTdombaJzSpa8dt2MORxmHZd
+0IHWENX3W8SnGgGNviNlVBMrZJgBxsNSJLYNR5UVIIACYpGQzZDaoGERn+EgRCjJ
+gC7nHlJNJSUd0iYw0pGoYY2TscgSIgAsyhCIOicKkiCqHFIFAUJWAIok6TwNsMgT
+QaO/xjht7QmYVBtRn0oF1QwZFQHFDluEqR/o357kSnC7UpKnOQPmcqfO+DN2a/H0
+OLvkVTt39Hus+8CDb+dQYemiiyd7Xu7d1rCyqGbB8rTujCzuw8Ef77oeNVqTeezr
+2udDT77VmF/nZL0fSI1ntvY1rL+Au/Kv+fKvzH3TcntFHMINt7Jmc1mbji0tewhn
+Xu0perqlbgS2dG73xl/4334JTytpbPb2tpz7WDD0qeXSZubI+ZQbSjR3vOfQ3XDv
+/li5vPh6z8LRtmh+Uu7KjcXNl8f6Ct6PjU+WlueT1W2eZ3necWP854LhJvdwdDi9
+TJ7XeOT0Mk/ymdyJCJ+RWHUw53DJzlXx1p9SeqHHP2uxN/NT//E1nfteoXXlE7Hi
+hvuRU3knduwKxYpuDt4pPLs1dfQXWXJFTA==
+=QaDK
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/geekygamer14
+View my publicly-auditable identity here: https://keybase.io/tjhorner
 
 ==================================================================
