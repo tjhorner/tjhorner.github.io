@@ -104,4 +104,14 @@ load = function(data){
     $("#steam-status").html(statusHtml);
     $("#steam-img").attr("src", data.steam.game.images.logo).fadeIn("fast");
   }
+
+  if(data.hardware.reported){
+    $("#cpu-usage").text(data.hardware.results["CPU usage"]);
+    $("#cpu-temp").text(data.hardware.results["CPU1 temperature"]);
+
+    $("#gpu-usage").text(data.hardware.results["GPU usage"]);
+    $("#gpu-temp").text(data.hardware.results["GPU temperature"]);
+
+    $("#ram-usage").text(data.hardware.results["RAM usage"]);
+  }
 }
