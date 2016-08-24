@@ -1,3 +1,4 @@
+ve
 <!DOCTYPE html>
 <html>
 <head>
@@ -176,6 +177,7 @@
           I love attending hackathons! Here are some hackathons I'll be going to in the Winter season:
         </div>
       </div>
+
       <div class="section group">
         <div class="col span_1_of_5"></div>
         <div class="col span_1_of_5">
@@ -207,6 +209,104 @@
     </section>
 
     <section style="background-color: rgb(157, 218, 247)">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Security</h2>
+        </div>
+        <div class="col span_4_of_5">
+          When I'm not making things, I like breaking things (responsibly). Here
+          are some things that I've broken with permission, in no particular
+          order.
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://npmjs.com"><img src="/img/npm.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Environment Variable Leak</b><br>
+          Found a vulnerability in the npm internal API that leaked environment
+          variables, including API keys and database passwords (I shit you not,
+          their Redis password used to be <code>this-is-a-password-for-redis-and-it-is-a-secret-so-dont-share-it</code>),
+          on certain requests.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://www.gotomeeting.com/"><img src="/img/gtm.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          Angular statements put into meeting chat were not properly escaped,
+          and executed on all clients whether they had the chat open or not. This
+          allowed an attacker to execute arbitrary JavaScript on all clients in
+          the meeting.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://www.transifex.com/"><img src="/img/tsfx.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          HTML not escaped properly in Glossary and Updates views from the Translate
+          page, allowing an attacker to execute arbitrary JavaScript on a client
+          viewing a certain translation.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://school.bighistoryproject.com/"><img src="/img/bhp.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting/Form Validator Bypass</b><br>
+          When updating a user's profile, one could send arbitrary data to the
+          server in the name fields, and that is later shown on the website
+          but isn't escaped, so you could put anything you want in there. It is
+          also shown and effective in the teacher's dashboard, so a student could
+          technically just XSS a teacher.<br><br>
+
+          <b>Privilege Escalation</b><br>
+          A certain exploit allows a student to gain access to the teacher dashboard,
+          and do everything a teacher can do (enable tests/quizzes, view student
+          scores, add/delete/edit students and classes, etc.) This is obviously
+          really bad.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://www.lenovosoftware.com/unified-workspace">Lenovo Unified Workspace</a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          An exploit in how wallpapers on Unified Workspace works allows a user
+          to input arbitrary JavaScript, which is later not escaped properly when
+          loading the workspace dashboard, and is then evaluated in a script.<br>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(20, 21, 23)" class="white">
       <div class="section group">
         <div class="col span_1_of_5">
           <h2>Experience</h2>
