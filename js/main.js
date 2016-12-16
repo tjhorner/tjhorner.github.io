@@ -114,4 +114,40 @@ load = function(data){
 
     $("#ram-usage").text(data.hardware.results["RAM usage"]);
   }
+
+  if(data.phone.updatedAt){
+    var loc = { lat: data.phone.latitude, lng: data.phone.longitude };
+
+    var map = new google.maps.Map($(".map")[0], {
+      zoom: 16,
+      draggable: false,
+      rotateControl: false,
+      scaleControl: false,
+      zoomControl: false,
+      streetViewControl: false,
+      scrollwheel: false,
+      keyboardShortcuts: false,
+      mapTypeControl: false,
+      center: loc
+    });
+
+    var marker = new google.maps.Marker({
+      position: loc,
+      icon: "/img/tj-transparent.png",
+      title: "This is where I am!",
+      map: map
+    });
+
+    var iwText = "<b>This is where I am!</b> My phone is at " + data.phone.battery + "% and it is " + (data.phone.charging ? "charging" : "not charging") + ". This location was last updated " + moment(data.phone.updatedAt).fromNow() + ".";
+
+    var iw = new google.maps.InfoWindow({
+      content: iwText
+    });
+
+    marker.addListener("click", function() {
+      iw.open(map, marker);
+    });
+
+    iw.open(map, marker);
+  }
 }
