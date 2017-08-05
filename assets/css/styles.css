@@ -80,7 +80,7 @@ table tbody tr td:first-of-type {
   padding-right: 15px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   section {
     margin: 0 15px;
   }
