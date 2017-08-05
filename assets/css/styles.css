@@ -1,0 +1,92 @@
+*, * * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #131313;
+  font-family: "Fira Code", "Fira Mono", monospace;
+  color: #e2e2e2;
+  font-size: 1.4em;
+}
+
+hr {
+  border: 1px dashed #e2e2e2
+}
+
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+.big, h2 {
+  font-size: 1.5em;
+}
+
+a {
+  color: white;
+}
+
+.strong, #song-name, #song-artist {
+  font-weight: bold;
+}
+
+.color-green {
+  color: #00b500;
+}
+
+.color-blue {
+  color: #0bc7dc;
+}
+
+.color-yellow {
+  color: #cccc00;
+}
+
+.color-orange {
+  color: #b57600;
+}
+
+.color-purple {
+  color: #e600e6;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  line-height: 35px;
+}
+
+ul > li {
+  text-indent: -5px;
+}
+
+ul > li:before {
+  content: "-";
+  text-indent: -5px;
+  padding-right: 10px;
+}
+
+table tbody tr td:first-of-type {
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  section {
+    margin: 0 15px;
+  }
+
+  td {
+    display: block;
+    margin-top: 5px;
+  }
+}

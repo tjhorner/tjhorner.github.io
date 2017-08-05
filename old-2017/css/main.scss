@@ -300,13 +300,23 @@ section{
   opacity: 0.7;
 }
 
-.music-display{
-  padding-left: $music-display-art-size + 10px;
-  background-repeat: no-repeat;
-  background-size: $music-display-art-size $music-display-art-size;
-  height: $music-display-art-size;
-  min-width: $music-display-art-size;
-  font-size: 1.5em;
+.music-display-background{
+  position: relative;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+
+  .music-display-inner{
+    font-size: 2em;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+  }
 }
 
 #steam-img{

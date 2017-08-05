@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/tjhorner
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tjhorner.com
+  * I am tjhorner (https://keybase.io/tjhorner) on keybase.
+  * I have a public key with fingerprint 00B1 86BC D697 A970 FAA9  F05D 1DF2 ABAB D57D 6984
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101c9b7e07ea6ba5d3f63062372c0e79cf9cde72337765888f3e395e076cb00a4490a",
+            "fingerprint": "00b186bcd697a970faa9f05d1df2ababd57d6984",
+            "host": "keybase.io",
+            "key_id": "1df2ababd57d6984",
+            "kid": "0101c9b7e07ea6ba5d3f63062372c0e79cf9cde72337765888f3e395e076cb00a4490a",
+            "uid": "2d644e335f690b84272a327255168819",
+            "username": "tjhorner"
+        },
+        "service": {
+            "hostname": "tjhorner.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1470749194,
+    "expire_in": 157680000,
+    "prev": "6f70b8c9f95dcd28c51ee40c58705f254645b29b4477140a66f3b44c53e4d6bc",
+    "seqno": 19,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMImAnicrVJbSFRBGF7zEi4IBVGGJXTKCjKbc50zKyWkIV2QzMI2q/WcOXPck7Zn
+O3vWC5sRFRWR9GKlYNLdTOvBCsWkzMSoXiyyh+0lCioRutJKlltzpF6ix+Zhhv//
+v++b75/5B9MSXe6E+Z87OkbqjUMJj+81hV2l7VF3hFFNrY7xRJhKMnWQKo2EbF+l
+oTEeBrCAxUiFBECiSKoiarwu8UDieMhhQCDCOsIagRzPQyiJsizrPOGRSPESVgFQ
+BAEBhclmdCNQQaygZQRsRxaorCypWJMQVBAEuqIgHYgaq+mcoiqqJkJakgVK9Jsh
+h0HNqUqI5BgmzdHAN2XvH/j/7Ds8JcdpkiAQnhd1CQFVFjjIKTzdRJGVZJlFDjBE
+rICym1C0vctvWgFiMfXZDM1WG5g4D+t08hciB5u7KTdombaJzSpa8dt2MORxmHZd
+0IHWENX3W8SnGgGNviNlVBMrZJgBxsNSJLYNR5UVIIACYpGQzZDaoGERn+EgRCjJ
+gC7nHlJNJSUd0iYw0pGoYY2TscgSIgAsyhCIOicKkiCqHFIFAUJWAIok6TwNsMgT
+QaO/xjht7QmYVBtRn0oF1QwZFQHFDluEqR/o357kSnC7UpKnOQPmcqfO+DN2a/H0
+OLvkVTt39Hus+8CDb+dQYemiiyd7Xu7d1rCyqGbB8rTujCzuw8Ef77oeNVqTeezr
+2udDT77VmF/nZL0fSI1ntvY1rL+Au/Kv+fKvzH3TcntFHMINt7Jmc1mbji0tewhn
+Xu0perqlbgS2dG73xl/4334JTytpbPb2tpz7WDD0qeXSZubI+ZQbSjR3vOfQ3XDv
+/li5vPh6z8LRtmh+Uu7KjcXNl8f6Ct6PjU+WlueT1W2eZ3necWP854LhJvdwdDi9
+TJ7XeOT0Mk/ymdyJCJ+RWHUw53DJzlXx1p9SeqHHP2uxN/NT//E1nfteoXXlE7Hi
+hvuRU3knduwKxYpuDt4pPLs1dfQXWXJFTA==
+=QaDK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tjhorner
+
+==================================================================

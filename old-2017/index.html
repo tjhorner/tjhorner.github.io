@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TJ Horner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!-- blaze it -->
+  <!-- <link rel="stylesheet" href="/css/fontawesome/font-awesome.css" media="screen" title="no title" charset="utf-8"> -->
+  <script charset="utf-8" src="//code.jquery.com/jquery.js"></script>
+  <script charset="utf-8" src="/js/typed.min.js"></script>
+  <script charset="utf-8" src="/js/main.js"></script>
+  <script src="https://tele.horner.tj/js/widget.js"></script>
+  <script src="https://me.tjhorner.com/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="terminal">
+    <span class="term-text"></span>
+    <br><br>
+    <a href="#" id="term-skip" style="display: none">Skip</a>
+    <div class="term-social">
+      <a href="http://twitter.com/tjhorner">Twitter</a>
+      <a href="http://github.com/tjhorner">GitHub</a>
+    </div>
+  </div>
+  <header class="transparent">
+    <div class="nav">
+      <a href="#">TJ Horner</a>
+      <!-- <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#hackathons">Hackathons</a>
+      </div> -->
+    </div>
+  </header>
+  <div class="content no-margin">
+    <div class="hero" style="background-image: url(/img/code.png)">
+      <h1>
+        Hi, I'm TJ.
+        <span class="subtitle" id="intro-completed" style="display: none"><br>Welcome to my actual website.</span>
+      </h1>
+      <div>
+        <!-- Sorry if you're looking for the video, I did some
+             audits and it really lags some devices. -->
+        <!-- <video src="/img/code.webm" autoplay loop></video> -->
+      </div>
+    </div>
+
+    <section style="background-color: rgb(20, 21, 23)" class="white">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>About Me</h2>
+        </div>
+        <div class="col span_4_of_5">
+          My name's TJ Horner, I'm <span id="age">15</span> years old and love programming. I like going to hackathons and creating awesome stuff!
+          I've been programming ever since I was 7 in ActionScript. I really love Google stuff. I'm an early adopter of just about any Google product.
+          I beta tested Google Wave, Voice, and many others. I love material design, and am thinking about redesigning this site with Polymer.
+          <a href="javascript:telegramWidget()">Want to talk? I'm mostly free!</a>
+          <br><br>
+          And right now? <span id="steam-status">I'm not playing anything on Steam, so I'm probably working on a project.</span>
+          <img id="steam-img" style="display: none"></img>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Favorite OS</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Mobile OS? I'd have to go with Android. Stock Android. No OEM bloatware, I'm fine...
+          <br>
+          For desktop OS I'm definitely for Fedora GNU/Linux. It has a <a href="https://fedoraproject.org/wiki/Forbidden_items?rd=ForbiddenItems">strict
+          policy</a> for free software, which I'm a fan of. I love tweaking everything.
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Favorite Language</h3>
+        </div>
+        <div class="col span_3_of_5">
+          <i>(Yes, programming language...)</i>
+          <br>
+          <a href="https://nodejs.org">Node.js</a> and <a href="https://ruby-lang.org/">Ruby</a> are my absolute favorite languages. I kinda-sorta like Python
+          but I don't use it for everything. I have experience in other OOP languages such as Java and C++, but I'm not as strong in those.
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Favorite Music</h3>
+        </div>
+        <div class="col span_3_of_5">
+          I like electro music mostly, but I'm into rock and jazz. <span id="music-tense">I'm not listening to anything right now.</span>
+          <br><br>
+          <div class="music-display-background">
+            <div class="music-display-inner">
+              <span id="music-artist">Nobody</span>
+              <br>
+              <b id="music-track">Nothing</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">My Rig</h3>
+        </div>
+        <div class="col span_3_of_5">
+          I use my desktop as my main weapon while programming. Here are the specs if you are interested
+          (<a href="https://pcpartpicker.com/user/tjhorner/saved/MXDhP6" target="_blank">PCPartPicker list</a>):
+
+          <ul>
+            <li><b>CPU:</b> AMD FX-8320 3.5GHz<!-- (currently using <span id="cpu-usage">[unknown]%</span>/temp: <span id="cpu-temp">?C</span>) --></li>
+            <li><b>GPU:</b> Gigabyte GeForce GTX 960 2GB<!-- (currently using <span id="gpu-usage">[unknown]%</span>/temp: <span id="gpu-temp">?C</span>) --></li>
+            <li><b>Motherboard:</b> Gigabyte GA-970A-DS3P</li>
+            <li><b>RAM:</b> 16 GB<!-- (currently using <span id="ram-usage">[unknown]MB</span>) --></li>
+          </ul>
+
+          <!-- Wondering about the "currently using" things? I have my desktop set up to report to my website every minute
+          about certain stats. So those stats are (almost) live. -->
+
+          I also have a laptop that I use for on-the-go stuff. And school, sometimes.
+          I bring it to hackathons too.
+
+          <ul>
+            <li><b>Model:</b> MSI GT72VR 6RE</li>
+            <li><b>CPU:</b> Intel i7-6700HQ (8 cores, 2.6 GHz)</li>
+            <li><b>GPU:</b> GeForce GTX 1070 (not 1070M, it's a desktop 1070)</li>
+            <li><b>RAM:</b> 16 GB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(157, 218, 247)">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Projects</h2>
+        </div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Collaborative Launchpad</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Control my Novation Launchpad over the internet. Uses Node.js for MIDI interface, express.js for the server and Socket.io for WebSocket stuff.
+          Yes, this all happens on my real Launchpad. It also wakes me up in the middle of the night.<br>
+          <b>GitHub:</b> <a href="https://github.com/tjhorner/collaborative-launchpad">https://github.com/tjhorner/collaborative-launchpad</a>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">CAH Creator</h3>
+        </div>
+        <div class="col span_3_of_5">
+          CAH Creator is a website that lets you create your own Cards Against Humanity-style
+          decks in real-time with friends and share them with anyone.
+          Check it out at <a href="http://cahcreator.com/">cahcreator.com</a>!
+          It's also open source on GitHub: <a href="https://github.com/CAHCreator">@CAHCreator</a>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Soundsync</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Soundsync is an Android app that lets you control Soundcloud on your desktop from your phone. You can also cast to your Google Cast-enabled
+          device which is great for parties, meetups, or even hackathons!<br>
+          <b>GitHub:</b> <a href="https://github.com/tjhorner/soundsync">https://github.com/tjhorner/soundsync</a>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">Cloud</h3>
+        </div>
+        <div class="col span_3_of_5">
+          Cloud is a thing that lets you do stuff. Actually, right now it lets you upload files and share them. It also integrates
+          with my URL shortener, horner.tj. So you could head over to <a href="https://horner.tj/c/66">horner.tj/c/66</a> and it would
+          take you to a sample text file! It's soon to be open source. I have it set up at <a href="https://cloud.horner.tj">cloud.horner.tj</a>.
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(20, 21, 23)" class="white">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Hackathons</h2>
+        </div>
+        <div class="col span_4_of_5">
+          <b>This section is outdated. Maybe I'll update it later. Hopefully.</b>
+          <br>
+          I love attending hackathons! Here are some hackathons I'll be going to in the Winter season:
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://pennapps.com"><img src="http://2015s.pennapps.com/assets/images/logo-main.svg" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>January 16 - 18, 2015</b><br>
+          PennApps is the premier student-run college hackathon. More than a thousand student programmers from all over the world converge on
+          Philadelphia twice a year for a weekend of creating and learning. Hackathons are about coding together to solve real-world problems.
+          Students work in teams of up to four people for thirty-six hours to create a web, mobile, or hardware application. PennApps has been
+          around for a long time, and we're soon going to be celebrating our eleventh iteration.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://hackgeny.com"><img src="http://hackgeny.com/img/logo_top.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>January 24 - 25, 2015</b><br>
+          Today's youth hacking tomorrow's future. Hack Gen Y is a hackathon for high school hackers in Silicon Valley.<br>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(157, 218, 247)">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Security</h2>
+        </div>
+        <div class="col span_4_of_5">
+          When I'm not making things, I like breaking things (responsibly). Here
+          are some things that I've broken with permission, in no particular
+          order.
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://npmjs.com"><img src="/img/npm.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Environment Variable Leak</b><br>
+          Found a vulnerability in the npm internal API that leaked environment
+          variables, including API keys and database passwords (I shit you not,
+          their Redis password used to be <code>this-is-a-password-for-redis-and-it-is-a-secret-so-dont-share-it</code>),
+          on certain requests.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://www.gotomeeting.com/"><img src="/img/gtm.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          Angular statements put into meeting chat were not properly escaped,
+          and executed on all clients whether they had the chat open or not. This
+          allowed an attacker to execute arbitrary JavaScript on all clients in
+          the meeting.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://www.transifex.com/"><img src="/img/tsfx.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          HTML not escaped properly in Glossary and Updates views from the Translate
+          page, allowing an attacker to execute arbitrary JavaScript on a client
+          viewing a certain translation.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://school.bighistoryproject.com/"><img src="/img/bhp.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting/Form Validator Bypass</b><br>
+          When updating a user's profile, one could send arbitrary data to the
+          server in the name fields, and that is later shown on the website
+          but isn't escaped, so you could put anything you want in there. It is
+          also shown and effective in the teacher's dashboard, so a student could
+          technically just XSS a teacher.<br><br>
+
+          <b>Privilege Escalation</b><br>
+          A certain exploit allows a student to gain access to the teacher dashboard,
+          and do everything a teacher can do (enable tests/quizzes, view student
+          scores, add/delete/edit students and classes, etc.) This is obviously
+          really bad.<br>
+        </div>
+      </div>
+
+      <div class="section group">
+        <div class="col span_1_of_5"></div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="http://www.lenovosoftware.com/unified-workspace">Lenovo Unified Workspace</a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          <b>Cross-Site Scripting</b><br>
+          An exploit in how wallpapers on Unified Workspace works allows a user
+          to input arbitrary JavaScript, which is later not escaped properly when
+          loading the workspace dashboard, and is then evaluated in a script.<br>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: rgb(20, 21, 23)" class="white">
+      <div class="section group">
+        <div class="col span_1_of_5">
+          <h2>Experience</h2>
+        </div>
+        <div class="col span_1_of_5">
+          <h3 class="no-margin">
+            <a href="https://srnd.org"><img src="https://srnd.org/assets/img/logo_small.png" class="center fit"></img></a>
+          </h3>
+        </div>
+        <div class="col span_3_of_5">
+          I <noscript>am</noscript><span id="internstatus"></span> an Intern in Software Engineering at StudentRND<span id="starting"></span>.
+          I make projects such as <a href="https://teams.codeday.org">CodeDay Teams</a> and <a href="http://ctf.codeday.org">ColemanCTF</a> that go along
+          with <a href="http://codeday.org">CodeDay</a>, a 24 hour programming marathon designed to encourage students to learn how to code.
+          I'm also a volunteer for CodeDay San Diego and help set up things like securing sponsors or getting judges.
+          <br><br>
+          <span id="project-tense">I'm currently</span> working on <b><span id="project">nothing</span></b> by
+          <b><span id="project-description">doing nothing</span></b>.
+          <br>
+          <span class="mute">Last updated at <span id="project-last-updated"></span>.<br>
+          (updates every 10 minutes)</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="inside-footer">
+      &copy; TJ Horner 2015-2016
+      <span class="pull-right">
+        <a href="https://horner.tj/keybase"><i class="fa social fa-key"></i></a>
+        <a href="https://horner.tj/github"><i class="fa social fa-github"></i></a>
+        <a href="https://horner.tj/twitter"><i class="fa social fa-twitter"></i></a>
+        <a href="https://horner.tj/facebook"><i class="fa social fa-facebook"></i></a>
+        <a href="javascript:telegramWidget()"><i class="fa social fa-paper-plane"></i></a>
+        <a id="donate"><i class="fa social fa-usd"></i></a>
+      </span>
+    </div>
+  </footer>
+
+  <div class="map"></div>
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXparlV9wTQNSmHi-rEq6Cu1nxHR-hTf8"></script>
+  <script src="https://me.tjhorner.com/jsonp"></script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55486313-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

@@ -91,7 +91,7 @@ load = function(data){
   if(data.lastfm.playing){
     $("#music-tense").text("Here's what I'm listening to right now!");
   }
-  $(".music-display").css("background-image", "url(" + data.lastfm.image + ")");
+  $(".music-display-background").css("background-image", "url(" + data.lastfm.image + ")");
   $("#music-track").text(data.lastfm.track);
   $("#music-artist").text(data.lastfm.artist);
 
@@ -149,5 +149,7 @@ load = function(data){
     });
 
     iw.open(map, marker);
+  }else{
+    $(".map").hide();
   }
 }
