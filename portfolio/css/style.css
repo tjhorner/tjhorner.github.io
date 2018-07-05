@@ -169,6 +169,7 @@ a {
   font-size: 2em;
   margin-right: 15px;
   max-height: 32px;
+  width: 32px;
 }
 
 .tech-card .tech-header .tech-rating {
