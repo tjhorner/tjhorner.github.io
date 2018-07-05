@@ -1,0 +1,195 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Nunito", "Roboto", "Arial", sans-serif;
+  background: #FEFEFE;
+  color: #202020;
+}
+
+*, * * {
+  box-sizing: border-box;
+}
+
+a {
+  color: #2196F3;
+}
+
+/* hell yeah this button is cool */
+.cool-button, .project-card .links a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  transform: scale(1);
+  transition: transform .1s;
+  background: linear-gradient(45deg, rgba(79,195,247,1) 0%, rgba(2,136,209,1) 100%);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.cool-button:hover, .project-card .links a:hover {
+  transform: scale(1.03);
+}
+
+.cool-button:active, .project-card .links a:active {
+  transform: scale(0.97);
+}
+
+.back-home::before {
+  content: "\f060";
+  margin-right: 5px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    margin: 0 15px;
+  }
+}
+
+/* START PROJECTS */
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 2, 31, 0.36);
+  padding: 45px 15px;
+  text-align: center;
+  color: #FEFEFE;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 20px;
+}
+
+.project-card * {
+  z-index: 2;
+  position: relative;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 7, 12, 0.8);
+  border-radius: 5px;
+}
+
+.project-card .title {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.project-card .desc {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.project-card .links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-card .links a:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.project-card .links a::after {
+  content: "\f35d";
+  margin-left: 5px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+/* END PROJECTS */
+
+/* START TECHNOLOGIES */
+
+.tech {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tech-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 2, 31, 0.36);
+  margin-bottom: 20px;
+}
+
+.tech-card .tech-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.tech-card .tech-header .tech-logo {
+  display: flex;
+  font-size: 2em;
+  margin-right: 15px;
+  max-height: 32px;
+}
+
+.tech-card .tech-header .tech-rating {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.tech-card .tech-header .tech-rating .tech-dot {
+  height: 12px;
+  width: 12px;
+  border: 1px solid #2196F3;
+  border-radius: 100%;
+}
+
+.tech-card .tech-header .tech-rating .tech-dot.filled {
+  background: #2196F3;
+}
+
+.tech-card .tech-subheader {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.tech-card .tech-desc {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.mfizz {
+  /* sigh */
+  display: inline-block;
+  position: relative;
+  bottom: 3px;
+}
