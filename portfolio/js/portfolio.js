@@ -211,7 +211,7 @@ portfolioApp.controller("pfController", function($scope) {
       name: "dpb",
       tagline: "Command-line tool for DeployBot",
       description: [
-        "This command line tool was created out of necessity — we previously used DeployBot at srnd.org, and when we did, we continually had to go to the DeployBot website and hit a bunch of buttons to deploy our changes. They had an API, so I wrote this simple tool so all you had to do to deploy your app was type \"dpb deploy\". That's it!"
+        "This command line tool was created out of necessity — we use DeployBot at srnd.org, and we continually had to go to the DeployBot website and hit a bunch of buttons to deploy our changes. They had an API, so I wrote this simple tool so all you had to do to deploy your app was type \"dpb deploy\". That's it!"
       ],
       imageUrl: "img/dpb.png",
       technologies: [
