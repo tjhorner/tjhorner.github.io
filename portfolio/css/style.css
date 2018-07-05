@@ -262,6 +262,25 @@ a {
   margin-top: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .modal-container {
+    flex-direction: column-reverse;
+  }
+
+  .modal-right {
+    margin-left: 0px !important;
+    min-width: 0px;
+    margin-bottom: 15px;
+  }
+
+  .modal-left {
+    padding-right: 0px;
+    border-right: 0px solid transparent !important;
+    padding-top: 15px;
+    border-top: 1px solid #BDBDBD;
+  }
+}
+
 .modal {
   position: relative;
   margin: auto;
