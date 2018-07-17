@@ -31,6 +31,13 @@ portfolioApp.controller("pfController", function($scope) {
       iconClass: "fab fa-android"
     },
     {
+      name: "iOS/Swift",
+      rating: 3,
+      description: "I've written one major iOS app (CodeDay Companion) and helped with Academus for iOS. I plan to enrich my experience with iOS development.",
+      color: "#1D70F2",
+      iconClass: "fab fa-app-store-ios"
+    },
+    {
       name: "Telegram Bot API",
       rating: 5,
       description: "I have written quite a lot of Telegram bots over the years, and I have gained lots of experience with Telegram's bot API as a result.",
@@ -124,16 +131,29 @@ portfolioApp.controller("pfController", function($scope) {
           name: "Android",
           iconClass: "fab fa-android",
           color: "#68B445"
+        },
+        {
+          name: "iOS",
+          iconClass: "fab fa-app-store-ios",
+          color: "#1D70F2"
         }
       ],
       links: [
         {
-          name: "GitHub",
-          url: "https://github.com/srnd/Companion.Android"
+          name: "Android Source",
+          url: "https://git.horner.tj/srnd/Companion.Android"
+        },
+        {
+          name: "iOS Source",
+          url: "https://git.horner.tj/srnd/Companion.iOS"
         },
         {
           name: "Play Store",
           url: "https://play.google.com/store/apps/details?id=org.srnd.companion"
+        },
+        {
+          name: "App Store",
+          url: "https://itunes.apple.com/us/app/codeday-companion/id1303959375"
         }
       ]
     },
@@ -223,8 +243,12 @@ portfolioApp.controller("pfController", function($scope) {
       ],
       links: [
         {
-          name: "GitHub",
-          url: "https://github.com/srnd/dpb"
+          name: "Source",
+          url: "https://git.horner.tj/srnd/dpb"
+        },
+        {
+          name: "npm",
+          url: "https://www.npmjs.com/package/dpb"
         }
       ]
     },
@@ -252,8 +276,8 @@ portfolioApp.controller("pfController", function($scope) {
       ],
       links: [
         {
-          name: "GitHub",
-          url: "https://github.com/tjhorner/MakerbotWebUI"
+          name: "Source",
+          url: "https://git.horner.tj/tj/MakerbotWebUI"
         }
       ]
     },
@@ -273,8 +297,8 @@ portfolioApp.controller("pfController", function($scope) {
       ],
       links: [
         {
-          name: "GitHub",
-          url: "https://github.com/tjhorner/node-makerbot-rpc"
+          name: "Source",
+          url: "https://git.horner.tj/tj/node-makerbot-rpc"
         }
       ]
     },
@@ -303,8 +327,8 @@ portfolioApp.controller("pfController", function($scope) {
           url: "https://schema.horner.tj"
         },
         {
-          name: "GitHub",
-          url: "https://github.com/tjhorner/schema.tl"
+          name: "Source",
+          url: "https://git.horner.tj/tj/schema.tl"
         }
       ]
     },
@@ -325,8 +349,8 @@ portfolioApp.controller("pfController", function($scope) {
       ],
       links: [
         {
-          name: "GitHub",
-          url: "https://github.com/tjhorner/node-launchpad-mk2"
+          name: "Source",
+          url: "https://git.horner.tj/tj/node-launchpad-mk2"
         }
       ]
     }
