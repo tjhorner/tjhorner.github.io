@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <!-- haha yes style tag -->
+    <style>
+      body, html {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shouts {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shout {
+        height: 470px;
+        width: 500px;
+        background-size: 500px;
+      }
+
+      .shout:hover {
+        
+      }
+
+      .shout:first-of-type {
+        background-image: url(img/shouting.png);
+        margin-right: 100px;
+      }
+
+      .shout:last-of-type {
+        background-image: url(img/shouting2.png);
+      }
+    </style>
+    <title>shout</title>
+  </head>
+  <body>
+    <div class="shouts">
+      <div class="shout shake-crazy"></div>
+      <div class="shout shake-crazy"></div>
+    </div>
+  </body>
+</html>
