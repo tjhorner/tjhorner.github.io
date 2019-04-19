@@ -5,7 +5,7 @@ portfolioApp.controller("pfController", function($scope) {
     {
       name: "Go",
       rating: 4,
-      description: "I have recently begun picking up Golang and rewriting many of my personal projects to get a good grasp on it. I am a big fan of how the language was designed: with errors and sustainability in mind.",
+      description: "I have recently begun picking up Golang and rewriting many of my personal projects to get a good grasp of it. I am a big fan of how the language was designed: with errors and sustainability in mind.",
       color: "#00ADD8",
       iconClass: "mfizz icon-go"
     },
