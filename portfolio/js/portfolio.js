@@ -88,7 +88,8 @@ portfolioApp.controller("pfController", function($scope) {
       description: [
         "Academus is an app for high school students with a busy educational lifestyle. As a team of 6 students, we built this app to cater to a student's most frequent needs and focus solely on what they actually want to see. It integrates with many popular student information systems with more always coming around.",
         "The backend is built mostly upon Ruby on Rails, with a little bit of Node.js here and there. All of the integration syncing code was written by hand with almost no external libraries to help us out.",
-        "We piloted the app in second semester of the 2017-2018 school year and obtained around 25% of our entire school in that amount of time, with the app spreading organically to other districts nationwide. We plan to build out major features every school year with constant student feedback."
+        "We piloted the app in second semester of the 2017-2018 school year and obtained around 25% of our entire school in that amount of time, with the app spreading organically to other districts nationwide. We plan to build out major features every school year with constant student feedback.",
+        "As of April 2019, nearly our entire high school has the app. We have grown to encompass nearly 90 different schools across the United States."
       ],
       imageUrl: "img/academus.png",
       technologies: [
