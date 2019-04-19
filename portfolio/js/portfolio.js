@@ -4,6 +4,13 @@ portfolioApp.controller("pfController", function($scope) {
   $scope.technologies = [
     {
       name: "Docker",
+      rating: 4,
+      description: "I have recently begun picking up Golang and rewriting many of my personal projects to get a good grasp on it. I am a big fan of how the language was designed: with errors and sustainability in mind.",
+      color: "#00ADD8",
+      iconClass: "mfizz icon-go"
+    },
+    {
+      name: "Docker",
       rating: 3,
       description: "I have used Docker to reliably deploy and scale up production-grade web services. I also have experience with the Docker API; for example, I spin up containers on-the-fly to run user code from CompileBot in a sandbox.",
       color: "#006FB6",
