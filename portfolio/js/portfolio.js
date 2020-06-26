@@ -149,11 +149,11 @@ portfolioApp.controller("pfController", function($scope) {
       links: [
         {
           name: "Android Source",
-          url: "https://git.horner.tj/srnd/Companion.Android"
+          url: "https://github.com/srnd/Companion.Android"
         },
         {
           name: "iOS Source",
-          url: "https://git.horner.tj/srnd/Companion.iOS"
+          url: "https://github.com/srnd/Companion.iOS"
         },
         {
           name: "Play Store",
@@ -252,7 +252,7 @@ portfolioApp.controller("pfController", function($scope) {
       links: [
         {
           name: "Source",
-          url: "https://git.horner.tj/srnd/dpb"
+          url: "https://github.com/srnd/dpb"
         },
         {
           name: "npm",
