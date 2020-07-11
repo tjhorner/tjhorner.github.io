@@ -32,15 +32,15 @@ portfolioApp.controller("pfController", function($scope) {
     },
     {
       name: "Android/Kotlin",
-      rating: 3,
+      rating: 4,
       description: "I have written several Android apps that are live on the Play Store, two of the biggest being CodeDay Companion and Academus (see more about them below). Both are written in Kotlin with best practices and \"DRY\" code in mind.",
       color: "#68B445",
       iconClass: "fab fa-android"
     },
     {
       name: "iOS/Swift",
-      rating: 3,
-      description: "I've written one major iOS app (CodeDay Companion) and helped with Academus for iOS. I plan to enrich my experience with iOS development.",
+      rating: 4,
+      description: "I've written one major iOS app (CodeDay Companion) and helped with Academus for iOS. I am currently working on an iOS image board viewer written with SwiftUI to enrich my iOS development skills.",
       color: "#1D70F2",
       iconClass: "fab fa-app-store-ios"
     },
@@ -149,11 +149,11 @@ portfolioApp.controller("pfController", function($scope) {
       links: [
         {
           name: "Android Source",
-          url: "https://git.horner.tj/srnd/Companion.Android"
+          url: "https://github.com/srnd/Companion.Android"
         },
         {
           name: "iOS Source",
-          url: "https://git.horner.tj/srnd/Companion.iOS"
+          url: "https://github.com/srnd/Companion.iOS"
         },
         {
           name: "Play Store",
@@ -252,7 +252,7 @@ portfolioApp.controller("pfController", function($scope) {
       links: [
         {
           name: "Source",
-          url: "https://git.horner.tj/srnd/dpb"
+          url: "https://github.com/srnd/dpb"
         },
         {
           name: "npm",
