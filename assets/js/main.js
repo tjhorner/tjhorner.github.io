@@ -18,7 +18,7 @@ const load = async () => {
     current_location.title = "Yes, this is live!"
   }
 
-  if (data.nowPlaying) {
+  if (data.nowPlaying && data.nowPlaying.isPlaying) {
     album_art.src = data.nowPlaying.album.imageUrl
     track_title.innerText = track_title.title = data.nowPlaying.track.title
     track_artist.innerText = track_artist.title = data.nowPlaying.track.artists.map(a => a.name).join(", ")
