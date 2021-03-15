@@ -149,3 +149,70 @@ table tbody tr td:first-of-type {
 .project-button {
   top: 100%;
 }
+
+.now-playing {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 15px;
+  background: #383838;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  max-width: 400px;
+}
+
+.now-playing.active {
+  display: flex;
+}
+
+.now-playing .album-art {
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.now-playing .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.now-playing .info div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.now-playing .info .spotify-icon::before {
+  content: "";
+  background-image: url("/assets/spotify.svg");
+  background-size: 15px 15px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.now-playing .info .spotify-icon {
+  margin-bottom: 3px;
+  font-size: 0.8em;
+  color: #B7B7B7;
+}
+
+.now-playing .info .track-title {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.now-playing .info .track-artist {
+  font-size: 0.9em;
+}
