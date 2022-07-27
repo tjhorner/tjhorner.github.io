@@ -216,3 +216,35 @@ table tbody tr td:first-of-type {
 .now-playing .info .track-artist {
   font-size: 0.9em;
 }
+
+.selected-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.selected-projects .project {
+  text-decoration: none;
+  display: block;
+  border: 2px solid white;
+}
+
+.selected-projects .project .info {
+  margin: 15px;
+  margin-top: 18px;
+}
+
+.selected-projects .project .info h3 {
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.selected-projects .project .info p {
+  text-decoration: none;
+  margin: 0;
+}
+
+.selected-projects .project img.cover {
+  max-width: 100%;
+}
