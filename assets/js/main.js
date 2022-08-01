@@ -13,10 +13,10 @@ const load = async () => {
   
   const { data } = await res.json()
   
-  if (data.location && data.location.searchQuery) {
-    current_location.innerText = data.location.searchQuery
-    current_location.title = "Yes, this is live!"
-  }
+  // if (data.location && data.location.searchQuery) {
+  //   current_location.innerText = data.location.searchQuery
+  //   current_location.title = "Yes, this is live!"
+  // }
 
   if (data.nowPlaying && data.nowPlaying.isPlaying) {
     album_art.src = data.nowPlaying.album.imageUrl
